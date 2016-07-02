@@ -50,4 +50,6 @@ document.getElementById("name").innerHTML = cweather.name;
 document.getElementById("icond").innerHTML = getIcon(cweather.weather[0].icon);
 
 //Print CURRENT TEMP
-document.getElementById("temp").innerHTML = Math.round(cweather.main.temp_min) + "&deg;" + unit + " - " +  Math.round(cweather.main.temp_max) + "&deg;" + unit + "<br />"  + Math.round(cweather.main.temp) + "&deg;" + unit + "<br/>" + "Hum: " + cweather.main.humidity + "%";
+document.getElementById("temp-const").innerHTML = Math.round(cweather.main.temp_min) + "&deg;" + unit + " - " +  Math.round(cweather.main.temp_max) + "&deg;" + unit;
+document.getElementById("temp-norm").innerHTML = Math.round(cweather.main.temp) + "&deg;" + unit;
+document.getElementById("hum").innerHTML = "Hum: " + cweather.main.humidity + "%";
