@@ -44,4 +44,25 @@ body{
   width: 40px;
   text-align: center;
   display: block;
+  color:#fff;
+}
+
+#temp{
+  position: relative;
+  top: 35%;
+  right: -10%;
+}
+
+#temp-max-min{
+  position: relative;
+  top: 31%;
+  right: -10%;
+
+}
+
+#hum{
+  position: relative;
+  top: 39%;
+  right: -10%;
+
 }
