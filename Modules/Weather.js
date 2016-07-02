@@ -2,37 +2,39 @@
  * Created by alebe on 02/07/2016.
  */
 
-forecastDays = 7;
+forecastDays = 6;
 
-//DAQ Part
+//Unit
 
-//Current Weather DAQ
+    var unit;
+    if (config.unit.toLowerCase() == "metric") unit = "C";
+    else if (config.unit.toLowerCase() == "imperial") unit = "F";
 
-var cWeather = new XMLHttpRequest();
-cWeather.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=" + config.city + "&appid=" + config.api +"&units=" + config.unit + "&lang=" + config.language, false);
-cWeather.send(null);
-var currentWeather = JSON.parse(cWeather.response);
+//PrintTemp
 
-//Weather Forecast DAQ
+    for (var id = 0; id != forecastDays;id++) {
+        fWeather = getfWeather(6);
+        document.getElementById("day" + (id + 1) + ".temp").innerHTML = Math.round(fWeather.list[id].temp.day) + "&deg;" + unit;
+    }
 
-var wForecast = new XMLHttpRequest();
-wForecast.open("GET", "http://api.openweathermap.org/data/2.5/forecast/daily?q=" + config.city + "&appid=" + config.api +"&units=" + config.unit + "&lang=" + config.language + "&cnt=" + forecastDays, false);
-wForecast.send(null);
-var weatherForecast = JSON.parse(wForecast.response);
+//DayName
 
-//Output Part
+var dayName = new Date();
+var day = dayName.getDay();
+var dayOfTheWeek = ["Domenica", "Luned&igrave;", "Marted&igrave;", "Mercoled&igrave;", "Gioved&igrave;", "Venerd&igrave;", "Sabato"];
 
-//Prints current weather data
+//PrintDay
 
-document.write("Meteo attuale per " + currentWeather.name + "<br />");
-document.write(currentWeather.weather[0].description + "<br />");
-document.write("Temperatura: " + currentWeather.main.temp + "°C" + "<br />");
-document.write("Nuvole: " + currentWeather.clouds.all + "<br />");
-document.write("Umidità: " + currentWeather.main.humidity + "<br />" + "<br />" + "<br />");
+var dayN = day+1;
 
-//Prints weather forecast data
-
-document.write("Previsioni meteo per " + weatherForecast.city.name + "<br />");
-document.write("Domani" + "<br />");
-document.write(weatherForecast.list[0].weather[0].description + "<br />");
-document.write(weatherForecast.list[0].temp.day + "<br />");
+for (var id = 0; id != 6; id++) {
+    if (dayN <= 6) {
+        document.getElementById("day" + (id+1)).innerHTML = dayOfTheWeek[dayN];
+        dayN++;
+    }
+    else {
+        dayN = 0;
+        document.getElementById("day" + (id+1)).innerHTML = dayOfTheWeek[dayN];
+        dayN++;
+    }
+}
