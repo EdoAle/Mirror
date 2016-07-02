@@ -28,41 +28,33 @@ body{
   background-color: #000;
 }
 
-#name{
-  position: relative;
-  top: 35%;
-  right:-5%;
-  width: 20%;
-  font-size: 30px;
-  color: #fff;
+#temp,
+#name,
+#temp-icon{
   display: inline-block;
+  color:#fff;
 }
 
-#temp,
-#temp-max-min,
-#hum{
-  width: 40px;
-  text-align: center;
-  display: block;
-  color:#fff;
+#name{
+  position: relative;
+  right:-5%;
+  top: -30%;
+  font-size: 30px;
+  color: #fff;
 }
 
 #temp{
   position: relative;
-  top: 35%;
+  top: -15%;
   right: -10%;
 }
 
-#temp-max-min{
-  position: relative;
-  top: 31%;
-  right: -10%;
-
-}
-
-#hum{
-  position: relative;
-  top: 39%;
-  right: -10%;
-
+#temp-icon{
+  position:relative;
+  right: -18%;
+  color:white;
+  font-size: 50px;
+  top: 5%;
+  width: 100px;
+  height: 100px;
 }
