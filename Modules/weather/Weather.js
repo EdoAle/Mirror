@@ -10,7 +10,7 @@ forecastDays = 6;
     if (config.unit.toLowerCase() == "metric") unit = "C";
     else if (config.unit.toLowerCase() == "imperial") unit = "F";
 
-//PrintTemp
+//PrintfTemp
 
     for (var id = 0; id != forecastDays;id++) {
         fWeather = getfWeather(6);
@@ -38,3 +38,6 @@ for (var id = 0; id != 6; id++) {
         dayN++;
     }
 }
+
+cweather = getcWeather();
+document.getElementById("name").innerHTML = cweather.name;
