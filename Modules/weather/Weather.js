@@ -4,6 +4,8 @@
 
 forecastDays = 6;
 
+//Print WEATHER FORECAST
+
 //Unit
 
     var unit;
@@ -39,5 +41,8 @@ for (var id = 0; id != 6; id++) {
     }
 }
 
+//Print CURRENT WEATHER
+
 cweather = getcWeather();
 document.getElementById("name").innerHTML = cweather.name;
+
