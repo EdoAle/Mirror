@@ -1,6 +1,10 @@
+@font-face{
+  font-family: 'Adequate1';
+  src: url(Adequate-ExtraLight.ttf);
+}
 body{
   background-color: #000;
-		font-family: Adequate;
+		font-family: 'Adequate1';
 }
 
 .weather-box{
@@ -38,15 +42,15 @@ body{
 #name{
   position: relative;
   right:-5%;
-  top: -30%;
+  top: 2%;
   font-size: 30px;
   color: #fff;
 }
 
 #temp{
   position: relative;
-  top: -15%;
-  right: -10%;
+  top: 20%;
+  right: -13%;
 }
 
 #temp-icon{
@@ -57,4 +61,12 @@ body{
   top: 5%;
   width: 100px;
   height: 100px;
+}
+
+#icond{
+  font-size:60px !important;
+  color:white !important;
+  position:relative !important;
+  right: -25% !important;
+  top: 5%;
 }
