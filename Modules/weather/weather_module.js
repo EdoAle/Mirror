@@ -34,15 +34,36 @@ function getfWeather(Days) {
 
 }
 
-//Output Part
-//Prints current weather data
+//Icon Part
 
+function getIcon(icon){
+    switch (icon) {
+        
+        //Day Icons
+        
+        case "01d": return('<i class= "wi wi-day-sunny"></i>');
+        case "02d":return('<i class= "wi wi-day-cloudy"></i>');
+        case "03d":return('<i class= "wi wi-cloud"></i>');
+        case "04d":return('<i class= "wi wi-cloudy"></i>');
+        case "09d":return('<i class= "wi wi-rain"></i>');
+        case "10d":return('<i class= "wi wi-day-rain"></i>');
+        case "11d":return('<i class= "wi wi-day-thunderstorm"></i>');
+        case "13d":return('<i class= "wi wi-day-snow"></i>');
+        case "50d":return('<i class= "wi wi-day-fog"></i>');
+        
+        //Night Icons
 
-
-var weatherForecast = getfWeather(forecastDays);
-var currentWeather = getcWeather();
-
-printfWeather(weatherForecast);
+        case "01n": return('<i class= "wi wi-night-clear"></i>');
+        case "02n":return('<i class= "wi wi-night-alt-cloudy"></i>');
+        case "03n":return('<i class= "wi wi-cloud"></i>');
+        case "04n":return('<i class= "wi wi-cloudy"></i>');
+        case "09n":return('<i class= "wi wi-rain"></i>');
+        case "10n":return('<i class= "wi wi-night-alt-rain"></i>');
+        case "11n":return('<i class= "wi wi-thunderstorm"></i>');
+        case "13n":return('<i class= "wi wi-night-alt-snow"></i>');
+        case "50n":return('<i class= "wi wi-night-fog"></i>');
+    }
+}
 
 /**
  * Created by alebe on 02/07/2016.
