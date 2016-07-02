@@ -64,11 +64,13 @@ body{
 .days-icons{
   font-size: 16px;
   color: white;
-  text-align: right;
-  position:relative;
-  right: -48%;
+  text-align: center;
+  position:fixed;
+  right: 8%;
 }
 
 .data-weather-min{
   padding-bottom: 6px;
 }
+
+#day1.temp,
