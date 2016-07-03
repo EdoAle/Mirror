@@ -118,3 +118,45 @@ body{
   font-size: 20px;
   color:#fff;
 }
+
+.calendar-box{
+  width: 400px;
+  height: 400px;
+  display: block;
+  text-align: right;
+  position: fixed;
+  right: 1%;
+}
+
+.calendar-maj{
+  height:50%;
+  width: 100%;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: #fff;
+  color: #fff;
+  font-size: 13px;
+}
+
+.calendar-min{
+  height:50%;
+  width: 100%;
+  color: #fff;
+  font-size: 20px;
+}
+
+.calendar-events-maj{
+  height: 25%;
+  width: 100%;
+}
+
+.calendar-events-min{
+  height: 25%;
+  width: 100%;
+}
+
+.calendar-events-max{
+  height: 25%;
+  width: 100%;
+  font-size: 30px;
+}

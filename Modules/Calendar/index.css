@@ -15,6 +15,9 @@ body{
   width: 400px;
   height: 400px;
   display: block;
+  text-align: right;
+  position: fixed;
+  right: 1%;
 }
 
 .calendar-maj{
