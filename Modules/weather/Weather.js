@@ -3,53 +3,51 @@
  */
 
 forecastDays = 6;
+var cUpdateTime = 1800000;
+var fUpdateTime = 7200000;
 
 //Print WEATHER FORECAST
 
-//Unit
-
-    var unit;
-    if (config.unit.toLowerCase() == "metric") unit = "C";
-    else if (config.unit.toLowerCase() == "imperial") unit = "F";
-
+function printfWeather(fdays) {
 
 //PrintfTemp
 
-fWeather = getfWeather(6);
-    for (var id = 0; id != forecastDays;id++) {
-        document.getElementById("day" + (id + 1) + ".temp").innerHTML = Math.round(fWeather.list[id].temp.day) + "&deg;" + unit + " " + getIcon(fWeather.list[id].weather[0].icon);
+    fWeather = getfWeather(fdays);
+    for (var id = 0; id != forecastDays; id++) {
+        document.getElementById("day" + (id + 1) + ".temp").innerHTML = Math.round(fWeather.list[id].temp.day) + "&deg;" + getUnit(config.unit) + " " + getIcon(fWeather.list[id].weather[0].icon);
     }
-
-//DayName
-
-var dayName = new Date();
-var day = dayName.getDay();
-var dayOfTheWeek = ["Domenica", "Luned&igrave;", "Marted&igrave;", "Mercoled&igrave;", "Gioved&igrave;", "Venerd&igrave;", "Sabato"];
 
 //PrintDay
 
-var dayN = day+1;
+    var dayN = getDayNum() + 1;
 
-for (var id = 0; id != 6; id++) {
-    if (dayN <= 6) {
-        document.getElementById("day" + (id+1)).innerHTML = dayOfTheWeek[dayN];
-        dayN++;
+    for (var id = 0; id != fdays; id++) {
+        if (dayN <= fdays) {
+            document.getElementById("day" + (id + 1)).innerHTML = getDayName(dayN);
+            dayN++;
+        }
+        else {
+            dayN = 0;
+            document.getElementById("day" + (id + 1)).innerHTML = getDayName(dayN);
+            dayN++;
+        }
     }
-    else {
-        dayN = 0;
-        document.getElementById("day" + (id+1)).innerHTML = dayOfTheWeek[dayN];
-        dayN++;
-    }
+
 }
-
 
 //Print CURRENT WEATHER
 
-cweather = getcWeather();
-document.getElementById("name").innerHTML = cweather.name;
-document.getElementById("icond").innerHTML = getIcon(cweather.weather[0].icon);
+function printcWeather() {
+
+    cweather = getcWeather();
+    document.getElementById("name").innerHTML = cweather.name;
+    document.getElementById("icond").innerHTML = getIcon(cweather.weather[0].icon);
 
 //Print CURRENT TEMP
-document.getElementById("temp-const").innerHTML = Math.round(cweather.main.temp_min) + "&deg;" + unit + " - " +  Math.round(cweather.main.temp_max) + "&deg;" + unit;
-document.getElementById("temp-norm").innerHTML = Math.round(cweather.main.temp) + "&deg;" + unit;
-document.getElementById("hum").innerHTML = "Hum: " + cweather.main.humidity + "%";
+    document.getElementById("temp-const").innerHTML = Math.round(cweather.main.temp_min) + "&deg;" + getUnit(config.unit) + " - " + Math.round(cweather.main.temp_max) + "&deg;" + getUnit(config.unit);
+    document.getElementById("temp-norm").innerHTML = Math.round(cweather.main.temp) + "&deg;" + getUnit(config.unit);
+    document.getElementById("hum").innerHTML = "Hum: " + cweather.main.humidity + "%";
+}
+
+setInterval(printcWeather(),cUpdateTime);
+setInterval(printfWeather(forecastDays),fUpdateTime);

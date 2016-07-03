@@ -65,6 +65,28 @@ function getIcon(icon){
     }
 }
 
+//Unit
+function getUnit(unit1) {
+    var unit;
+    if (unit1.toLowerCase() == "metric") return ("C");
+    else if (unit1.toLowerCase() == "imperial") return("F");
+}
+
+//DayNum
+
+function getDayNum() {
+    var dayName = new Date();
+    var day = dayName.getDay();
+    return(day)
+}
+
+//DayName
+
+function getDayName(day) {
+    var dayOfTheWeek = ["Domenica", "Luned&igrave;", "Marted&igrave;", "Mercoled&igrave;", "Gioved&igrave;", "Venerd&igrave;", "Sabato"];
+    return(dayOfTheWeek[day]);
+}
+
 /**
  * Created by alebe on 02/07/2016.
  */
