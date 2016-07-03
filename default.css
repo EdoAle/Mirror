@@ -46,7 +46,7 @@ body{
   position: relative;
   right:-5%;
   top: 2%;
-  font-size: 30px;
+  font-size: 34px;
   color: #fff;
 }
 
@@ -88,8 +88,7 @@ body{
 
 #temp-const,
 #hum{
-  font-size:
-  11px;
+  font-size:15px;
 }
 #temp-norm{
   font-size: 26px;
