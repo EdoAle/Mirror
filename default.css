@@ -15,6 +15,7 @@
   src: url(Roboto-Thin.ttf);
 }
 body{
+  font-size: 22px;
   background-color: #000;
 		font-family: 'Roboto';
 }
@@ -64,7 +65,7 @@ body{
 }
 
 .days{
-  font-size: 16px;
+  font-size: 20px;
   color:white;
   text-align: left;
   position:relative;
@@ -74,7 +75,7 @@ body{
 
 #day1.temp,
 .days-icons{
-  font-size: 16px;
+  font-size: 20px;
   color: white;
   text-align: right;
   position:fixed;
@@ -91,7 +92,7 @@ body{
   11px;
 }
 #temp-norm{
-  font-size: 22px;
+  font-size: 26px;
 }
 
 .days-icons{
