@@ -97,3 +97,24 @@ body{
 .days-icons{
   text-align: right;
 }
+
+.news-name{
+  text-align: center;
+  width: 60%;
+  position: fixed;
+  opacity: 0.7;
+  top: 3%;
+  right: 20%;
+  font-size: 20px;
+  color:#fff;
+}
+
+.news-title{
+  text-align: center;
+  width: 60%;
+  position: fixed;
+  top: 7%;
+  right: 20%;
+  font-size: 20px;
+  color:#fff;
+}
