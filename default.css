@@ -23,14 +23,14 @@ body{
 .weather-box{
   background-color: #000;
   position:absolute;
-  right:3%;
+  left:3%;
   top:3%;
   height: 400px;
   width: 400px;
 }
 
 .data-weather-maj{
-  widht: 100%;
+  width: 100%;
   height: 30%;
   background-color: #000;
 }
@@ -44,7 +44,7 @@ body{
 
 #name{
   position: relative;
-  right:-5%;
+  left:-5%;
   top: 2%;
   font-size: 34px;
   color: #fff;
@@ -53,15 +53,15 @@ body{
 #temp{
   position: relative;
   top: 20%;
-  right: -13%;
+  left: 2%;
 }
 
 #icond{
   font-size:60px !important;
   color:white !important;
   position:relative !important;
-  right: -25% !important;
-  top: 5%;
+  left: 13% !important;
+  top: 10%;
 }
 
 .days{
@@ -69,7 +69,7 @@ body{
   color:white;
   text-align: left;
   position:relative;
-  left:5%;
+  right:5%;
 
 }
 
@@ -79,7 +79,7 @@ body{
   color: white;
   text-align: right;
   position:fixed;
-  right: 8%;
+  left: 24%;
 }
 
 .data-weather-min{
