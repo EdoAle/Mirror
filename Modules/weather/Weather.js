@@ -47,7 +47,6 @@ function printcWeather() {
     document.getElementById("temp-const").innerHTML = Math.round(cweather.main.temp_min) + "&deg;" + getUnit(config.unit) + " - " + Math.round(cweather.main.temp_max) + "&deg;" + getUnit(config.unit);
     document.getElementById("temp-norm").innerHTML = Math.round(cweather.main.temp) + "&deg;" + getUnit(config.unit);
     document.getElementById("hum").innerHTML = "Hum: " + cweather.main.humidity + "%";
-    alert("Mi sono aggiornato!!!");
 }
 
 setInterval(printcWeather(),cUpdateTime);
