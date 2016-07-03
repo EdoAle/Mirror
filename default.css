@@ -12,11 +12,11 @@
 }
 @font-face{
   font-family: 'Roboto';
-  src: url(RobotoCondensed-Light.ttf);
+  src: url(Roboto-Thin.ttf);
 }
 body{
   background-color: #000;
-		font-family: 'Adequate1';
+		font-family: 'Roboto';
 }
 
 .weather-box{
