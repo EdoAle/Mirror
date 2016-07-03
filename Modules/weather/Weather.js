@@ -14,7 +14,7 @@ function printfWeather(fdays) {
 
     fWeather = getfWeather(fdays);
     for (var id = 0; id != forecastDays; id++) {
-        document.getElementById("day" + (id + 1) + ".temp").innerHTML = Math.round(fWeather.list[id].temp.day) + "&deg;" + getUnit(config.unit) + " " + getIcon(fWeather.list[id].weather[0].icon);
+        document.getElementById("day" + (id + 1) + ".temp").innerHTML = Math.round(fWeather.list[id].temp.day) + "&deg;" + getUnit(config.unit) + "&emsp;&emsp;&emsp;&emsp;&emsp;" + getIcon(fWeather.list[id].weather[0].icon);
     }
 
 //PrintDay
