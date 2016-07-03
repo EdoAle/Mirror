@@ -1,0 +1,51 @@
+@font-face{
+  font-family: 'Adequate1';
+  src: url(../../Adequate-ExtraLight.ttf);
+}
+@font-face{
+  font-family: 'San Francisco';
+  src: url(../../San_Francisco_Display_Ultralight.ttf);
+}
+body{
+  background: #000;
+  font-family: 'Adequate1';
+}
+
+.calendar-box{
+  width: 400px;
+  height: 400px;
+  display: block;
+}
+
+.calendar-maj{
+  height:50%;
+  width: 100%;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: #fff;
+  color: #fff;
+  font-size: 13px;
+}
+
+.calendar-min{
+  height:50%;
+  width: 100%;
+  color: #fff;
+  font-size: 13px;
+}
+
+.calendar-events-maj{
+  height: 25%;
+  width: 100%;
+}
+
+.calendar-events-min{
+  height: 25%;
+  width: 100%;
+}
+
+.calendar-events-max{
+  height: 25%;
+  width: 100%;
+  font-size: 18px;
+}

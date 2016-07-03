@@ -2,6 +2,18 @@
   font-family: 'Adequate1';
   src: url(Adequate-ExtraLight.ttf);
 }
+@font-face{
+  font-family: 'San Francisco';
+  src: url(San_Francisco_Display_Ultralight.ttf);
+}
+@font-face{
+  font-family: 'Distyrict Pro';
+  src: url(DistProTh.otf);
+}
+@font-face{
+  font-family: 'Roboto';
+  src: url(RobotoCondensed-Light.ttf);
+}
 body{
   background-color: #000;
 		font-family: 'Adequate1';
