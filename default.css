@@ -17,7 +17,7 @@
 body{
   font-size: 22px;
   background-color: #000;
-		font-family: 'Roboto';
+	font-family: 'Roboto';
 }
 
 .weather-box{
@@ -87,7 +87,7 @@ body{
 }
 
 .data-weather-min{
-  padding-bottom: 6px;
+  padding-bottom: 10px;
   width: 406px;
   display: inline-block;
 }
@@ -177,4 +177,13 @@ body{
 
 span#day1.days{
   width: 200px;
+}
+
+#txt{
+  position: fixed;
+  top: 47%;
+  right: 40%;
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
 }

@@ -1,39 +1,20 @@
 <!DOCTYPE html>
 <html>
-<style>
-table,th,td {
-  border : 1px solid black;
-  border-collapse: collapse;
-}
-th,td {
-  padding: 5px;
-}
-</style>
-<body>
-
-<br><br>
-<table id="demo"></table>
-
+<head>
 <script>
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (xhttp.readyState == 4 && xhttp.status == 200) {
-      myFunction(xhttp);
-    }
-  };
-  xhttp.open("GET", "http://xml.corriereobjects.it/rss/homepage.xml", true);
-  xhttp.send();
-function myFunction(xml) {
-  var i;
-  var xmlDoc = xml.responseXML;
-  var table;
-  var x = xmlDoc.getElementsByTagName("item");
-  for (i = 0; i <x.length; i++) {
-    table += x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue + "<br />";
-  }
-  document.getElementById("demo").innerHTML = table;
-}
+var now = new Date();
+var start = new Date(now.getFullYear(), 0, 0);
+var diff = now - start;
+var oneDay = 1000 * 60 * 60 * 24;
+var day = Math.floor(diff / oneDay);
+alert(day);
+
 </script>
+</head>
+
+<body onload="startTime()">
+
+<div id="txt"></div>
 
 </body>
 </html>
