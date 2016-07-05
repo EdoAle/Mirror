@@ -35,18 +35,6 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
-.idea/compiler.xml
-.idea/workspace.xml
-.idea/modules.xml
-.idea/copyright/profiles_settings.xml
-.node_modules
-**/.node_modules
-**/node_modules
-.node_modules/*
-node_modules/*
-**/node_modules/*
-**/.node_modules/*
-node_modules/extract-zip/node_modules/minimist/test/dotted.js
-node_modules/indent-string/package.json
-node_modules/is-my-json-valid/test/json-schema-draft4/patternProperties.json
-node_modules/jodid25519/.npmignore
+
+.idea/
+node_modules/
