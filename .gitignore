@@ -39,4 +39,4 @@ jspm_packages
 /.idea
 /node_modules/*
 /node_modules/.bin
-/node_modules/boom
+/node_modules/boom/
