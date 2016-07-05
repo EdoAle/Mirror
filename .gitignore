@@ -39,3 +39,4 @@ jspm_packages
 .idea/workspace.xml
 .idea/modules.xml
 .idea/copyright/profiles_settings.xml
+.node_modules
