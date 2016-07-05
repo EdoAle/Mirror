@@ -25,12 +25,10 @@ function myFunction(xml) {
   var x = xmlDoc.getElementsByTagName("item");
   for (i = 0; i <x.length; i++) {
     divNews[i] = x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
+  }
+  document.getElementById("news-title").innerHTML = divNews[f];
+  f++;
+  var t = setTimeout(myFunction, 500);
 }
-}
+
 // Update the title
-var e = 0;
-function update(){ 
-    document.getElementById("news-title").innerHTML = divNews[e];
-    e++;
-}
-setInterval(update(), 5000);
