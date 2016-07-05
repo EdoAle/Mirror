@@ -2,6 +2,8 @@
 logs
 *.log
 npm-debug.log*
+/node_modules
+/.idea
 
 # Runtime data
 pids
@@ -37,6 +39,4 @@ jspm_packages
 .node_repl_history
 
 /.idea
-/node_modules/*
-/node_modules/.bin
-/node_modules/boom/**
+/node_modules
