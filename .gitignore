@@ -35,3 +35,7 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+.idea/compiler.xml
+.idea/workspace.xml
+.idea/modules.xml
+.idea/copyright/profiles_settings.xml
