@@ -20,7 +20,6 @@ function myFunction(xml) {
   document.getElementById("news-name").innerHTML = newsName; 
   var i = 0;
   var f = 0;
-  var e = 0;
   var xmlDoc = xml.responseXML;
   var divNews = [""];
   var x = xmlDoc.getElementsByTagName("item");
@@ -29,8 +28,12 @@ function myFunction(xml) {
   }
 
 // Update the title
-
+  var e = 0;
+  var myVar = setInterval(update, 3000);
   for (var f=0; f<1000; f++) {
-      setTimeout(function(){ e++; document.getElementById("news-title").innerHTML = divNews[e]; }, 6000);
+      function update(){ 
+          document.getElementById("news-title").innerHTML = divNews[e];
+        };
+      e =+ 1;
   }
 }
