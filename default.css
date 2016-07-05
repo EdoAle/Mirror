@@ -98,7 +98,7 @@ body{
   text-align: right;
 }
 
-.news-name{
+#news-name{
   text-align: center;
   width: 60%;
   position: fixed;
@@ -109,7 +109,7 @@ body{
   color:#fff;
 }
 
-.news-title{
+#news-title{
   text-align: center;
   width: 60%;
   position: fixed;
