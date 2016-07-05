@@ -2,6 +2,7 @@
  * Created by alebe on 03/07/2016.
  */
 
+//XML send request
 
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
@@ -11,6 +12,9 @@
   };
   xhttp.open("GET", "http://xml.corriereobjects.it/rss/homepage.xml", true);
   xhttp.send();
+
+//Export the data
+
 function myFunction(xml) {
   var newsName = 'Corriere della Sera' ;
   document.getElementById("news-name").innerHTML = newsName; 
@@ -23,6 +27,9 @@ function myFunction(xml) {
   for (i = 0; i <x.length; i++) {
     divNews[i] = x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
   }
+
+// Update the title
+
   for (var f=0; f<1000; f++) {
       setTimeout(function(){ e++; document.getElementById("news-title").innerHTML = divNews[e]; }, 6000);
   }
