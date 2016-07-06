@@ -28,9 +28,10 @@ function myFunction(xml) {
     for (i = 0; i < x.length; i++) {
         divNews[i] = x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
     }
+    document.getElementById("news-title").innerHTML = divNews[0];
 }
 
-var f = 0;
+var f = 1;
 // Update the title
 function printTitle() {
     document.getElementById("news-title").innerHTML = divNews[f];
