@@ -18,6 +18,8 @@ body{
   font-size: 22px;
   background-color: #000;
 	font-family: 'Roboto';
+	margin: 0px;
+	padding: 0px;
 }
 
 .weather-box{
@@ -84,7 +86,7 @@ body{
   color: white;
   text-align: right;
   position:fixed;
-  left: 17.5%;
+  left: 14.3%;
 }
 
 .data-weather-min{
@@ -107,23 +109,30 @@ body{
   text-align: right;
 }
 
+#news{
+  text-align: center;
+  width: 50%;
+  position: fixed;
+  top: 6%;
+  right: 25%;
+  border-radius: 25px;
+  border: 2px solid #fff;
+}
+
 #news-name{
   text-align: center;
-  width: 60%;
-  position: fixed;
-  opacity: 0.7;
-  top: 6%;
-  right: 20%;
+  width: 100%;
   font-size: 20px;
+  opacity: 0.7%;
   color:#fff;
 }
 
 #news-title{
   text-align: center;
-  width: 60%;
-  position: fixed;
+  width: 96%;
+  padding: 0 2% 0 2%;
+  position: relative;
   top: 10%;
-  right: 20%;
   font-size: 20px;
   color:#fff;
 }
@@ -193,8 +202,8 @@ span#day1.days{
 
 #txt{
   position: fixed;
-  top: 47%;
-  right: 40%;
+  top: 44.2%;
+  right: 40.5%;
   font-size: 50px;
   color: #fff;
   text-align: center;
@@ -208,6 +217,8 @@ span#day1.days{
   left: 0%;
   border-radius: 25px;
   border: 2px solid #fff;
+  display: inline-block;
+  color: #fff;
 }
 
 #last-box{
@@ -218,4 +229,61 @@ span#day1.days{
   right: 0%;
   border-radius: 25px;
   border: 2px solid #fff;
+}
+
+.finance-box-min{
+  width:400px;
+  height: 50px;
+  display: inline-block;
+	margin: 0px;
+	padding: 0px;
+}
+
+.symbol1,
+.symbol2,
+.symbol3,
+.symbol4,
+.symbol5,
+.symbol6,
+.symbol7,
+.symbol8{
+  width:124px;
+  height: 38px;
+  position: relative;
+  left: 0%;
+  display: inline-block;
+  padding-top: 12px;
+  padding-left: 5px;
+}
+
+.bid1,
+.bid2,
+.bid3,
+.bid4,
+.bid5,
+.bid6,
+.bid7,
+.bid8{
+  width:130px;
+  height: 50px;
+  position: relative;
+  left: 0%;
+  display: inline-block;
+  text-align: center;
+}
+
+.percentage1,
+.percentage2,
+.percentage3,
+.percentage4,
+.percentage5,
+.percentage6,
+.percentage7,
+.percentage8{
+  width:122px;
+  height: 50px;
+  position: relative;
+  left: 0%;
+  display: inline-block;
+  text-align: right;
 }
