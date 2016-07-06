@@ -23,17 +23,18 @@ body{
 .weather-box{
   background-color: #000;
   position:absolute;
-  left:3%;
-  top:3%;
   height: 400px;
   width: 400px;
   display: inline-block;
+  border-radius: 25px;
+  border: 2px solid #fff;
 }
 
 .data-weather-maj{
   width: 400px;
   height: 120px;
   background-color: #000;
+  border-radius: 25px;
 }
 
 #temp,
@@ -46,7 +47,7 @@ body{
 #name{
   position: relative;
   width:133px;
-  left:0%;
+  left:3%;
   top: 2%;
   font-size: 34px;
   color: #fff;
@@ -54,9 +55,9 @@ body{
 
 #temp{
   position: relative;
-  width: 115px;
+  width: 133px;
   top: 20%;
-  left: 0%;
+  left: 3%;
 }
 
 #icond{
@@ -83,12 +84,14 @@ body{
   color: white;
   text-align: right;
   position:fixed;
-  left: 16%;
+  left: 17.5%;
 }
 
 .data-weather-min{
   padding-bottom: 10px;
   width: 406px;
+  position: relative;
+  left: 3%;
   display: inline-block;
 }
 
@@ -131,7 +134,9 @@ body{
   display: block;
   text-align: right;
   position: fixed;
-  right: 1%;
+  right:0%;
+  border-radius: 25px;
+  border: 2px solid #fff;
 }
 
 .calendar-maj{
@@ -155,6 +160,9 @@ body{
   height: 25%;
   width: 100%;
   font-size: 18px;
+  text-align: left;
+  position: relative;
+  left: 1%;
 }
 
 .calendar-events-min{
@@ -162,6 +170,9 @@ body{
   width: 100%;
   font-size: 16px;
   opacity: 0.7;
+  text-align: left;
+  position: relative;
+  left: 1%;
 }
 
 .calendar-events-max,
@@ -169,6 +180,7 @@ body{
   height: 25%;
   width: 100%;
   font-size: 30px;
+  text-align: center;
 }
 
 .calendar-events-max1{
@@ -182,8 +194,28 @@ span#day1.days{
 #txt{
   position: fixed;
   top: 47%;
-  right: 39%;
+  right: 40%;
   font-size: 50px;
   color: #fff;
   text-align: center;
+}
+
+#finance-box{
+  width: 400px;
+  height: 400px;
+  position: fixed;
+  bottom: 0%;
+  left: 0%;
+  border-radius: 25px;
+  border: 2px solid #fff;
+}
+
+#last-box{
+  width: 400px;
+  height: 400px;
+  position: fixed;
+  bottom: 0%;
+  right: 0%;
+  border-radius: 25px;
+  border: 2px solid #fff;
 }
