@@ -20,6 +20,7 @@ body{
 	font-family: 'Roboto';
 	margin: 0px;
 	padding: 0px;
+  color: #fff;
 }
 
 .weather-box{
@@ -209,6 +210,16 @@ span#day1.days{
   text-align: center;
 }
 
+#last-box{
+  width: 400px;
+  height: 400px;
+  position: fixed;
+  bottom: 0%;
+  right: 0%;
+  border-radius: 25px;
+  border: 2px solid #fff;
+}
+
 #finance-box{
   width: 400px;
   height: 400px;
@@ -219,16 +230,6 @@ span#day1.days{
   border: 2px solid #fff;
   display: inline-block;
   color: #fff;
-}
-
-#last-box{
-  width: 400px;
-  height: 400px;
-  position: fixed;
-  bottom: 0%;
-  right: 0%;
-  border-radius: 25px;
-  border: 2px solid #fff;
 }
 
 .finance-box-min{
@@ -246,7 +247,7 @@ span#day1.days{
 #symbol5,
 #symbol6,
 #symbol7,
-#symbol8{
+#symbol0{
   width:124px;
   height: 38px;
   position: relative;
@@ -263,7 +264,7 @@ span#day1.days{
 #bid5,
 #bid6,
 #bid7,
-#bid8{
+#bid0{
   width:130px;
   height: 50px;
   position: relative;
@@ -272,14 +273,14 @@ span#day1.days{
   text-align: center;
 }
 
-#percentage1,
-#percentage2,
-#percentage3,
-#percentage4,
-#percentage5,
-#percentage6,
-#percentage7,
-#percentage8{
+#PercentChange1,
+#PercentChange2,
+#PercentChange3,
+#PercentChange4,
+#PercentChange5,
+#PercentChange6,
+#PercentChange7,
+#PercentChange0{
   width:122px;
   height: 50px;
   position: relative;
