@@ -2,9 +2,11 @@ function printFinance(arr) {
 
     for (var i = 0; i <= 7; i++) {
 
+        //Cambia gli id con quelli dell'index.html (non mettere i numeri)
+
         document.getElementById("symbol" + i).innerHTML = arr.query.results.quote[i].Symbol;
         document.getElementById("bid" + i).innerHTML = arr.query.results.quote[i].Bid;
-        document.getElementById("percentage" + i).innerHTML = arr.query.results.quote[i].PercentChange;
+        document.getElementById("PercentChange" + i).innerHTML = arr.query.results.quote[i].PercentChange;
 
     }
 }
