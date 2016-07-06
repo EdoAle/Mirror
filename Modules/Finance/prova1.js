@@ -1,3 +1,15 @@
+function printFinance(arr) {
+
+    for (var i = 0; i <= 7; i++) {
+
+        //Cambia gli id con quelli dell'index.html (non mettere i numeri)
+
+        document.getElementById("symbol" + i).innerHTML = arr.query.results.quote[i].Symbol;
+        document.getElementById("bid" + i).innerHTML = arr.query.results.quote[i].Bid;
+        document.getElementById("PercentChange" + i).innerHTML = arr.query.results.quote[i].PercentChange;
+
+    }
+}
 
 
 var xmlhttp = new XMLHttpRequest();
@@ -6,15 +18,16 @@ var url = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.
 xmlhttp.onreadystatechange = function() {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
         var myArr = JSON.parse(xmlhttp.responseText);
-        myFunction(myArr);
+        printFinance(myArr);
     }
 };
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
 
-function myFunction(arr) {
+   /*
+    
     var out = "";
-    out = arr.query.results.quote[0].PercentChange;
+    out0 = arr.query.results.quote[0].PercentChange;
     out1 = arr.query.results.quote[0].Bid;
     out2 = arr.query.results.quote[0].Symbol;
     out3 = arr.query.results.quote[1].PercentChange;
@@ -38,7 +51,7 @@ function myFunction(arr) {
     out21 = arr.query.results.quote[7].PercentChange;
     out22 = arr.query.results.quote[7].Bid;
     out23 = arr.query.results.quote[7].Symbol;
-    document.getElementById("finance").innerHTML = out;
+    document.getElementById("finance0").innerHTML = out0;
     document.getElementById("finance1").innerHTML = out1;
     document.getElementById("finance2").innerHTML = out2;
     document.getElementById("finance3").innerHTML = out3;
@@ -62,4 +75,4 @@ function myFunction(arr) {
     document.getElementById("finance21").innerHTML = out21;
     document.getElementById("finance22").innerHTML = out22;
     document.getElementById("finance23").innerHTML = out23;
-}
+}*/
