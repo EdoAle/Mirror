@@ -2,7 +2,9 @@
 /**
  * Created by alebe on 03/07/2016.
  */
-var ReloadTime = 5000;
+var ReloadTime = 6000;
+
+var reloadTime2 = 1800000;
 
 //XML send request
 
