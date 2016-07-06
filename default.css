@@ -239,14 +239,14 @@ span#day1.days{
 	padding: 0px;
 }
 
-.symbol1,
-.symbol2,
-.symbol3,
-.symbol4,
-.symbol5,
-.symbol6,
-.symbol7,
-.symbol8{
+#symbol1,
+#symbol2,
+#symbol3,
+#symbol4,
+#symbol5,
+#symbol6,
+#symbol7,
+#symbol8{
   width:124px;
   height: 38px;
   position: relative;
@@ -256,14 +256,14 @@ span#day1.days{
   padding-left: 5px;
 }
 
-.bid1,
-.bid2,
-.bid3,
-.bid4,
-.bid5,
-.bid6,
-.bid7,
-.bid8{
+#bid1,
+#bid2,
+#bid3,
+#bid4,
+#bid5,
+#bid6,
+#bid7,
+#bid8{
   width:130px;
   height: 50px;
   position: relative;
@@ -272,14 +272,14 @@ span#day1.days{
   text-align: center;
 }
 
-.percentage1,
-.percentage2,
-.percentage3,
-.percentage4,
-.percentage5,
-.percentage6,
-.percentage7,
-.percentage8{
+#percentage1,
+#percentage2,
+#percentage3,
+#percentage4,
+#percentage5,
+#percentage6,
+#percentage7,
+#percentage8{
   width:122px;
   height: 50px;
   position: relative;
