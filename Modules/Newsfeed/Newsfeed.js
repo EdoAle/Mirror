@@ -38,4 +38,4 @@ function printTitle() {
     f++;
 }
 
-setInterval(printTitle, ReloadTime);
+setInterval(printTitle, ReloadTime)
