@@ -38,3 +38,5 @@ jspm_packages
 
 .idea
 jsconfig.json
+
+Modules/Finance/finance.js
