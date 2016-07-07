@@ -88,11 +88,11 @@ body{
   color: white;
   text-align: right;
   position:fixed;
-  left: 16%;
+  left: 16.5%;
 }
 
 .data-weather-min{
-  padding-bottom: 10px;
+  padding-bottom: 22px;
   width: 406px;
   position: relative;
   left: 3%;
