@@ -36,13 +36,11 @@ function myFunction(xml) {
         divNews.date[i] = x[i].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue;
     }
     document.getElementById("news-title").innerHTML = divNews.title[0];
-    document.getElementById("news-name").innerHTML = newsHours[0];
 }
 var f = 1;
 // Update the title
 function printTitle() {  
     document.getElementById("news-title").innerHTML = divNews.title[f];
-    document.getElementById("news-name").innerHTML = newsHours[f];
     f++;
 }
 

@@ -221,6 +221,20 @@ span#day1.days{
   border: 2px solid #fff;
 }
 
+/* remove LOGO AND COPYRIGHT --------------------------------------*/
+
+a[href^="http://maps.google.com/maps"]{display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+    display:none;
+}
+.gmnoprint div {
+    background:none !important;
+}
+
+/*------------------------------------------------------------------*/
+
 #finance-box{
   width: 400px;
   height: 400px;
