@@ -1,20 +1,11 @@
-<!DOCTYPE html>
 <html>
-<head>
-<script>
-var now = new Date();
-var start = new Date(now.getFullYear(), 0, 0);
-var diff = now - start;
-var oneDay = 1000 * 60 * 60 * 24;
-var day = Math.floor(diff / oneDay);
-alert(day);
-
-</script>
-</head>
-
-<body onload="startTime()">
-
-<div id="txt"></div>
-
-</body>
+    <head>
+        <title>News</title>
+        <script src="prova.js"></script>
+    </head>
+    <body>
+        <div id="news-name"></div>
+        <div id="news-title"></div>
+        <div id="hour"></div>
+    </body>
 </html>
