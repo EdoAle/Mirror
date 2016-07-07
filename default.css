@@ -25,7 +25,8 @@ body{
 
 .weather-box{
   background-color: #000;
-  position:absolute;
+  position:fixed;
+  left: 0.5%;
   height: 400px;
   width: 400px;
   display: inline-block;
@@ -87,7 +88,7 @@ body{
   color: white;
   text-align: right;
   position:fixed;
-  left: 15.3%;
+  left: 16%;
 }
 
 .data-weather-min{
@@ -225,7 +226,7 @@ span#day1.days{
   height: 400px;
   position: fixed;
   bottom: 0%;
-  left: 0%;
+  left: 0.5%;
   font-size: 20px;
   border-radius: 25px;
   border: 2px solid #fff;
