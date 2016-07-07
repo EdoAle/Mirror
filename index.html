@@ -8,7 +8,7 @@
       <link href="weather-icons-master/css/weather-icons-wind.min.css" rel="stylesheet">
       <script type="text/javascript" src="Config/config.js"></script>
       <script type="text/javascript" src="Modules/weather/weather_module.js"></script>
-      <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script> 
   </head>
     <body onload="startTime()">
     	<div class="weather-box">
@@ -57,13 +57,13 @@
 		          </div>
 		      </div>
       <div id="news">
-		    <div id="news-name"></div>
-		    <div id="news-title"></div>
+		    <div id="news-name">Caricamento...</div>
+		    <div id="news-title">Caricamento...</div>
       </div>
       <div id="txt"></div>
         <div id="finance-box">
           <div class="finance-box-min">
-            <div id="symbol0"> </div>
+            <div id="symbol0">Caricamento...</div>
             <div id="bid0"> </div>
             <div id="PercentChange0"> </div>
           </div>
@@ -102,14 +102,11 @@
               <div id="bid7"> </div>
               <div id="PercentChange7"> </div>
           </div>
-          <div class="finance-box-min">
-              <div id="symbol8"> </div>
-              <div id="bid8"> </div>
-              <div id="PercentChange8"> </div>
-          </div>
         </div>
-      <div id="last-box"></div>
+      <div id="map-box"></div>
       <script src="Modules/Finance/finance.js"></script>
+      <script src="Modules/Maps/map.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6Pa77yiFVJQbWUrrxeM9Van3-WIYV-NM&callback=initMap" async defer></script>
       <script type="text/javascript" src="Modules/clock/clock.js"></script>
       <script type="text/javascript" src="Modules/weather/Weather.js"></script>
       <script type="text/javascript" src="Modules/Newsfeed/Newsfeed.js"></script>

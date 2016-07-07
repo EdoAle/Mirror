@@ -211,12 +211,12 @@ span#day1.days{
   text-align: center;
 }
 
-#last-box{
+#map-box{
   width: 400px;
   height: 400px;
-  position: fixed;
-  bottom: 0%;
-  right: 0%;
+  position: fixed !important;
+  bottom: 0% !important;
+  right: 0% !important;
   border-radius: 25px;
   border: 2px solid #fff;
 }
