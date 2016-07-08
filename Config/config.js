@@ -7,3 +7,13 @@ var config = {
         city: "Treviso,it",
         language: "it",
 }
+var newsfeed = {
+        url: [
+                "http://xml.corriereobjects.it/rss/homepage.xml",
+                ""
+        ],
+        newsName: [
+                "Corriere della sera",
+                
+        ]
+}

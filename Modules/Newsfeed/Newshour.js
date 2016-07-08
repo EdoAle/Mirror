@@ -1,18 +1,14 @@
-<html>
-    <head>
-        <title>News</title>
-    </head>
-    <body>
-        <div id="news-name"></div>
-        <script>
-var ReloadTime = 5000;
+var ReloadTime = 10000;
+
+var reloadTime2 = 1800000;
+function newsUpdate() {
 
 //XML send request
 
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
-        myFunction2(xhttp);
+        myFunction(xhttp);
     }
 };
 xhttp.open("GET", "http://xml.corriereobjects.it/rss/homepage.xml", true);
@@ -32,7 +28,7 @@ var newsHours = [];
 
 var newsName = 'Corriere della Sera';
 
-function myFunction2(xml) {
+function myFunction(xml) {
     var i = 0;
     var xmlDoc = xml.responseXML;
     var x = xmlDoc.getElementsByTagName("item");
@@ -46,12 +42,17 @@ function myFunction2(xml) {
         if (resultDate[i] >= 60){
             newsHours[i] = Math.round(resultDate[i] / 60);
             if (newsHours[i] > 1){
-                newsHours[i] = newsHours[i] + " ore fa";
+                newsHours[i] = newsHours[i] + " ore fa:";
             }else{
-                newsHours[i] = newsHours[i] + " ora fa";
+                newsHours[i] = newsHours[i] + " ora fa:";
             }
         }else{
-            newsHours[i] = resultDate[i] + " minuti fa";
+            newsHours[i] = resultDate[i];
+            if (newsHours[i] > 1){
+                newsHours[i] = newsHours[i] + " minuti fa:";
+            }else{
+                newsHours[i] = newsHours[i] + " minuto fa:";
+            }
         }
     }
     document.getElementById("news-name").innerHTML = newsName + ", " + newsHours[0];
@@ -67,7 +68,8 @@ function printHour() {
 };
 
 setInterval(printHour, ReloadTime);
+};
 
-        </script>
-    </body>
-</html>
+newsUpdate();
+
+setInterval(newsUpdate, reloadTime2);
