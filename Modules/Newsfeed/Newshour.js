@@ -39,6 +39,9 @@ function myFunction(xml) {
         newnewsDate[i] = new Date(newsDate[i]);
         result[i] = ((currentDate - newnewsDate[i])/1000)/60;
         resultDate[i] = Math.round(result[i]);
+    }
+    bubbleSort();
+    for (i = 0; i < x.length; i++) {
         if (resultDate[i] >= 60){
             newsHours[i] = Math.round(resultDate[i] / 60);
             if (newsHours[i] > 1){
@@ -57,6 +60,20 @@ function myFunction(xml) {
     }
     document.getElementById("news-name").innerHTML = newsName + ", " + newsHours[0];
 };
+function bubbleSort() {
+      var length = resultDate.length;
+      for (var i = (length - 1); i >= 0; i--) { //Number of passes
+        for (var j = (length - i); j > 0; j--) {
+          //Compare the adjacent positions
+          if(resultDate[j] < resultDate[j-1]) {
+            //Swap the numbers
+            var tmp = resultDate[j];
+            resultDate[j] = resultDate[j-1];
+            resultDate[j-1] = tmp;
+          }
+        }        
+      }
+    }
 
 var f = 1;
 
