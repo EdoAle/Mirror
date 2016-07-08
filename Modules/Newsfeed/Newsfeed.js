@@ -33,7 +33,6 @@ function myFunction(xml) {
     var x = xmlDoc.getElementsByTagName("item");
     for (i = 0; i < x.length; i++) {
         divNews.title[i] = x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
-        divNews.date[i] = x[i].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue;
     }
     document.getElementById("news-title").innerHTML = divNews.title[0];
 }
