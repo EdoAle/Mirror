@@ -167,7 +167,7 @@ span#day1.days{
   display: block;
   text-align: right;
   position: fixed;
-  right:0%;
+  right:0.5%;
   border-radius: 25px;
   border: 2px solid #fff;
 }
@@ -231,14 +231,24 @@ span#day1.days{
   text-align: center;
 }
 
-/*---MAP PROPERTIES-------------------------------------------------------*/
 
-#map-box{
+/*---LAST BOX PROPERTIES----------------------------------------------------*/
+
+#last-box{
   width: 400px;
   height: 400px;
-  position: fixed !important;
-  bottom: 0% !important;
-  right: 0% !important;
+  position: fixed;
+  bottom: 0%;
+  right: 0.5%;
+  border-radius: 25px;
+  border: 2px solid #fff;
+}
+
+/*---MAP PROPERTIES-------------------------------------------------------*/
+
+#map-app{
+  width: 100%;
+  height: 100%px;
   border-radius: 25px;
   border: 2px solid #fff;
 }
