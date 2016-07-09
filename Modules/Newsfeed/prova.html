@@ -17,60 +17,65 @@ xhttp.onreadystatechange = function() {
 xhttp.open("GET", "http://xml.corriereobjects.it/rss/homepage.xml", true);
 xhttp.send();
 
-var newsDate = [""];
+//Export the data
 
-var resultDate = [""];
+var divNews = {
+    title: [""],
+    date: []
+}
 
-var newnewsDate = [""];
+var titleNews = [];
 
-var result = [""];
+var newnewsDate = [];
 
-var currentDate = new Date();
+var cDate = new Date();
 
-var newsHours = [];
+var result = [];
+
+var result1 = [];
 
 var newsName = 'Corriere della Sera';
+
+var newsDate = [];
 
 function myFunction(xml) {
     var i = 0;
     var xmlDoc = xml.responseXML;
     var x = xmlDoc.getElementsByTagName("item");
     for (i = 0; i < x.length; i++) {
+        divNews.title[i] = x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
         newsDate[i] = x[i].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue;
-    }
-    for (i = 0; i < x.length; i++) {
         newnewsDate[i] = new Date(newsDate[i]);
-        result[i] = ((currentDate - newnewsDate[i])/1000)/60;
-        resultDate[i] = Math.round(result[i]);
+        divNews.date[i] = ((cDate - newnewsDate[i])/1000)/60;
     }
     bubbleSort();
-    document.getElementById("news-name").innerHTML = newsName + ", " + resultDate[0];
+    document.getElementById("news-name").innerHTML = divNews.title[0];
 };
 function bubbleSort() {
-      var length = resultDate.length;
+      var length = divNews.date.length;
       for (var i = (length - 1); i >= 0; i--) { //Number of passes
         for (var j = (length - i); j > 0; j--) {
           //Compare the adjacent positions
-          if(resultDate[j] < resultDate[j-1]) {
+          if(divNews.date[j] < divNews.date[j-1]) {
             //Swap the numbers
-            var tmp = resultDate[j];
-            resultDate[j] = resultDate[j-1];
-            resultDate[j-1] = tmp;
+            var tmp = divNews.title[j];
+            var tmp2 = divNews.date[j];
+            divNews.title[j] = divNews.title[j-1];
+            divNews.date[j] = divNews.date[j-1];
+            divNews.title[j-1] = tmp;
+            divNews.date[j-1] = tmp2;
           }
         }        
       }
     }
-
 var f = 1;
-
-// Update the hour
-
-function printHour() {  
-    document.getElementById("news-name").innerHTML = newsName + ", " + resultDate[f];
+// Update the title
+function printTitle() { 
+    document.getElementById("news-name").innerHTML = divNews.title[f]; 
     f++;
-};
+}
 
-setInterval(printHour, ReloadTime);
+setInterval(printTitle, ReloadTime);
 
         </script>
     </body>

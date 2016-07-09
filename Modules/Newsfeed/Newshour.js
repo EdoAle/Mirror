@@ -34,8 +34,6 @@ function myFunction(xml) {
     var x = xmlDoc.getElementsByTagName("item");
     for (i = 0; i < x.length; i++) {
         newsDate[i] = x[i].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue;
-    }
-    for (i = 0; i < x.length; i++) {
         newnewsDate[i] = new Date(newsDate[i]);
         result[i] = ((currentDate - newnewsDate[i])/1000)/60;
         resultDate[i] = Math.round(result[i]);
@@ -48,6 +46,11 @@ function myFunction(xml) {
                 newsHours[i] = newsHours[i] + " ore fa:";
             }else{
                 newsHours[i] = newsHours[i] + " ora fa:";
+            }
+            if (newsHours[i] >= 24){
+                newsHours = newsHours + " giorno fa:";
+            }else if (newsHours >= 48){
+                newsHours = newsHours + " giorni fa:";
             }
         }else{
             newsHours[i] = resultDate[i];
