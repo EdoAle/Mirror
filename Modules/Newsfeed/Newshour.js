@@ -1,6 +1,6 @@
 var ReloadTime = 10000;
 
-var reloadTime2 = 1800000;
+var reloadTime2 = 1200000;
 function newsUpdate() {
 
 //XML send request
