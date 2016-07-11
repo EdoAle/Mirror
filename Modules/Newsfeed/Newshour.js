@@ -1,18 +1,16 @@
-var ReloadTime = 10000;
-
-var reloadTime2 = 1200000;
-function newsUpdate() {
+function newsUpdate1() {
 
 //XML send request
 
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-    if (xhttp.readyState == 4 && xhttp.status == 200) {
-        myFunction(xhttp);
-    }
-};
-xhttp.open("GET", "http://xml.corriereobjects.it/rss/homepage.xml", true);
-xhttp.send();
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            myFunction(xhttp);
+        }
+    };
+    xhttp.open("GET", "http://xml.corriereobjects.it/rss/homepage.xml", true);
+    xhttp.send();
+
 
 var newsDate = [""];
 
@@ -23,10 +21,6 @@ var newnewsDate = [""];
 var result = [""];
 
 var currentDate = new Date();
-
-var newsHours = [];
-
-var newsName = 'Corriere della Sera';
 
 function myFunction(xml) {
     var i = 0;
@@ -43,33 +37,33 @@ function myFunction(xml) {
     document.getElementById("news-name").innerHTML = newsName + ", " + newsHours[0];
 };
 
-function setRules(x){
-    for (i = 0; i < x.length; i++) {
-        if (resultDate[i] >= 60){
-            newsHours[i] = Math.round(resultDate[i] / 60);
-            if (newsHours[i] >= 48){
-                newsHours[i] = Math.round(newsHours[i] / 24);
-                newsHours[i] = newsHours[i] + " giorni fa:";
-            }else if (newsHours[i] >= 24){
-                newsHours[i] = Math.round(newsHours[i] / 24);
-                newsHours[i] = newsHours[i] + " giorno fa:";
-            }
-            if (newsHours[i] > 1){
-                newsHours[i] = newsHours[i] + " ore fa:";
+    function setRules(x){
+        for (i = 0; i < x.length; i++) {
+            if (resultDate[i] >= 1440){
+                newsHours[i] = Math.round((resultDate[i] / 60) / 24);
+                if (newsHours[i] > 1){
+                    newsHours[i] = newsHours[i] + " giorni fa:";
+                }else{
+                    newsHours[i] = newsHours[i] + " giorno fa:";
+                }
+            }else if (resultDate[i] >= 60){
+                newsHours[i] = Math.round(resultDate[i] / 60);
+                if (newsHours[i] > 1){
+                    newsHours[i] = newsHours[i] + " ore fa:";
+                }else{
+                    newsHours[i] = newsHours[i] + " ora fa:";
+                }
             }else{
-                newsHours[i] = newsHours[i] + " ora fa:";
-            }
-        }else{
-            newsHours[i] = resultDate[i];
-            if (newsHours[i] > 1){
-                newsHours[i] = newsHours[i] + " minuti fa:";
-            }else{
-                newsHours[i] = newsHours[i] + " minuto fa:";
+                newsHours[i] = resultDate[i];
+                if (newsHours[i] > 1){
+                    newsHours[i] = newsHours[i] + " minuti fa:";
+                }else{
+                    newsHours[i] = newsHours[i] + " minuto fa:";
+                }
             }
         }
-    }
-};
-
+    };
+    
 function bubbleSort() {
     var length = resultDate.length;
     for (var i = (length - 1); i >= 0; i--) { //Number of passes
@@ -84,17 +78,4 @@ function bubbleSort() {
         }        
     }
 };
-
-var f = 1;
-
-// Update the hour
-
-function printHour() {  
-    document.getElementById("news-name").innerHTML = newsName + ", " + newsHours[f];
-    f++;
 };
-
-setInterval(printHour, ReloadTime);
-};
-
-newsUpdate();

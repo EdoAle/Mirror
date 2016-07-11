@@ -15,5 +15,6 @@ var newsfeed = {
         newsName: [
                 "Corriere della sera",
                 "La Repubblica"
-        ]
+        ],
+        reloadTime: 10000,
 }

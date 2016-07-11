@@ -1,29 +1,19 @@
+function newsUpdate2() {
 
-/**
- * Created by alebe on 03/07/2016.
- */
-var ReloadTime = 10000;
 
-var reloadTime2 = 1200000 ;
-function newsUpdate() {
-    
 //XML send request
 
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-    if (xhttp.readyState == 4 && xhttp.status == 200) {
-        myFunction(xhttp);
-    }
-};
-xhttp.open("GET", "http://xml.corriereobjects.it/rss/homepage.xml", true);
-xhttp.send();
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            myFunction(xhttp);
+        }
+    };
+    xhttp.open("GET", "http://xml.corriereobjects.it/rss/homepage.xml", true);
+    xhttp.send();
+
 
 //Export the data
-
-var divNews = {
-    title: [""],
-    date: []
-}
 
 var titleNews = [];
 
@@ -49,6 +39,7 @@ function myFunction(xml) {
         newnewsDate[i] = new Date(newsDate[i]);
         divNews.date[i] = ((cDate - newnewsDate[i])/1000)/60;
     }
+    newsLength = x.length;
     bubbleSort();
     document.getElementById("news-title").innerHTML = divNews.title[0];
 };
@@ -69,17 +60,4 @@ function bubbleSort() {
         }        
       }
     }
-var f = 1;
-
-// Update the title
-
-function printTitle() {
-    document.getElementById("news-title").innerHTML = divNews.title[f]; 
-    f++;
-}
-
-setInterval(printTitle, ReloadTime);
 };
-
-
-newsUpdate();
