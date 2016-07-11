@@ -45,15 +45,15 @@ function myFunction(xml) {
 
 function setRules(x){
     for (i = 0; i < x.length; i++) {
-        if (resultDate[i] >= 60){
-            newsHours[i] = Math.round(resultDate[i] / 60);
-            if (newsHours[i] >= 48){
-                newsHours[i] = Math.round(newsHours[i] / 24);
+        if (resultDate[i] >= 1440){
+            newsHours[i] = Math.round((resultDate[i] / 60) / 24);
+            if (newsHours[i] > 1){
                 newsHours[i] = newsHours[i] + " giorni fa:";
-            }else if (newsHours[i] >= 24){
-                newsHours[i] = Math.round(newsHours[i] / 24);
+            }else{
                 newsHours[i] = newsHours[i] + " giorno fa:";
             }
+        }else if (resultDate[i] >= 60){
+            newsHours[i] = Math.round(resultDate[i] / 60);
             if (newsHours[i] > 1){
                 newsHours[i] = newsHours[i] + " ore fa:";
             }else{
