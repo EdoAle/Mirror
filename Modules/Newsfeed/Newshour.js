@@ -37,6 +37,7 @@ function myFunction(xml) {
     document.getElementById("news-name").innerHTML = newsName + ", " + newsHours[0];
 };
 
+<<<<<<< HEAD
     function setRules(x){
         for (i = 0; i < x.length; i++) {
             if (resultDate[i] >= 1440){
@@ -53,6 +54,28 @@ function myFunction(xml) {
                 }else{
                     newsHours[i] = newsHours[i] + " ora fa:";
                 }
+=======
+function setRules(x){
+    for (i = 0; i < x.length; i++) {
+        if (resultDate[i] >= 1440){
+            newsHours[i] = Math.round((resultDate[i] / 60) / 24);
+            if (newsHours[i] > 1){
+                newsHours[i] = newsHours[i] + " giorni fa:";
+            }else{
+                newsHours[i] = newsHours[i] + " giorno fa:";
+            }
+        }else if (resultDate[i] >= 60){
+            newsHours[i] = Math.round(resultDate[i] / 60);
+            if (newsHours[i] > 1){
+                newsHours[i] = newsHours[i] + " ore fa:";
+            }else{
+                newsHours[i] = newsHours[i] + " ora fa:";
+            }
+        }else{
+            newsHours[i] = resultDate[i];
+            if (newsHours[i] > 1){
+                newsHours[i] = newsHours[i] + " minuti fa:";
+>>>>>>> origin/master
             }else{
                 newsHours[i] = resultDate[i];
                 if (newsHours[i] > 1){
