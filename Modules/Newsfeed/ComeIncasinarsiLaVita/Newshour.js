@@ -32,12 +32,14 @@ function myFunction(xml,k) {
     allLenght = allLenght + x.lenght;
     var relativeLenght = allLenght - x.lenght;
     for (var i = relativeLenght; i < allLenght; i++) {
-        newsDate[i] = x[i].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue;
-        newnewsDate[i] = new Date(newsDate[i]);
-        result[i] = ((currentDate - newnewsDate[i])/1000)/60;
-        newsAll[i][0] = x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
-        newsAll[i][1] = newsfeed.newsName[k];
-        newsAll[i][2] = Math.round(result[i]);
+        for (var z = 0; z < x.lenght; z++){
+            newsDate[i] = x[z].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue;
+            newnewsDate[i] = new Date(newsDate[i]);
+            result[i] = ((currentDate - newnewsDate[i])/1000)/60;
+            newsAll[i][0] = x[z].getElementsByTagName("title")[0].childNodes[0].nodeValue;
+            newsAll[i][1] = newsfeed.newsName[k];
+            newsAll[i][2] = Math.round(result[i]);
+        }
     }
 };
 
