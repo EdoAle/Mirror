@@ -70,11 +70,10 @@ function bubbleSort() {
       }
     }
 var f = 1;
+
 // Update the title
+
 function printTitle() {
-    if (f > x.lenght){
-        newsUpdate();
-    };
     document.getElementById("news-title").innerHTML = divNews.title[f]; 
     f++;
 }
