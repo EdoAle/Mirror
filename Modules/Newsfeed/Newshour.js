@@ -2,14 +2,6 @@ function newsUpdate1() {
 
 //XML send request
 
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-    if (xhttp.readyState == 4 && xhttp.status == 200) {
-        myFunction(xhttp);
-    }
-};
-xhttp.open("GET", "http://xml.corriereobjects.it/rss/homepage.xml", true);
-xhttp.send();
 
 var newsDate = [""];
 
@@ -20,6 +12,17 @@ var newnewsDate = [""];
 var result = [""];
 
 var currentDate = new Date();
+
+
+
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+        myFunction(xhttp);
+    }
+};
+xhttp.open("GET", "http://xml.corriereobjects.it/rss/homepage.xml", true);
+xhttp.send();
 
 function myFunction(xml) {
     var i = 0;

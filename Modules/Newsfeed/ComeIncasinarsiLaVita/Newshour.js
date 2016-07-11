@@ -2,14 +2,6 @@ function newsUpdate1() {
 
 //XML send request
 
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-    if (xhttp.readyState == 4 && xhttp.status == 200) {
-        myFunction(xhttp);
-    }
-};
-xhttp.open("GET", "http://xml.corriereobjects.it/rss/homepage.xml", true);
-xhttp.send();
 
 var newsDate = [""];
 
@@ -21,58 +13,82 @@ var result = [""];
 
 var currentDate = new Date();
 
-function myFunction(xml) {
-    var i = 0;
+
+
+for (var i = 0; i < (newsfeed.url).lenght; i++){
+var xhttp = new XMLHttpRequest();
+xhttp[i].onreadystatechange = function() {
+    if (xhttp[i].readyState == 4 && xhttp[i].status == 200) {
+        myFunction(xhttp[i],i);
+    }
+};
+xhttp[i].open("GET", newsfeed.url[i], true);
+xhttp[i].send();
+}
+
+function myFunction(xml,k) {
     var xmlDoc = xml.responseXML;
     var x = xmlDoc.getElementsByTagName("item");
-    for (i = 0; i < x.length; i++) {
+    allLenght = allLenght + x.lenght;
+    var relativeLenght = allLenght - x.lenght;
+    for (var i = relativeLenght; i < allLenght; i++) {
         newsDate[i] = x[i].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue;
         newnewsDate[i] = new Date(newsDate[i]);
         result[i] = ((currentDate - newnewsDate[i])/1000)/60;
-        resultDate[i] = Math.round(result[i]);
+        newsAll[i][0] = x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
+        newsAll[i][1] = newsfeed.newsName[k];
+        newsAll[i][2] = Math.round(result[i]);
     }
+};
+
+function setParams() {
     bubbleSort();
-    setRules(x);
-    document.getElementById("news-name").innerHTML = newsName + ", " + newsHours[0];
+    setRules();
 };
 
 function setRules(x){
-    for (i = 0; i < x.length; i++) {
-        if (resultDate[i] >= 1440){
-            newsHours[i] = Math.round((resultDate[i] / 60) / 24);
-            if (newsHours[i] > 1){
-                newsHours[i] = newsHours[i] + " giorni fa:";
+    for (var i = 0; i < allLenght; i++) {
+        if (newsAll[i][2] >= 1440){
+            newsAll[i][2] = Math.round((newsAll[i][2] / 60) / 24);
+            if (newsAll[i][2] > 1){
+                newsAll[i][2] = newsAll[i][2] + " giorni fa:";
             }else{
-                newsHours[i] = newsHours[i] + " giorno fa:";
+                newsAll[i][2] = newsAll[i][2] + " giorno fa:";
             }
-        }else if (resultDate[i] >= 60){
-            newsHours[i] = Math.round(resultDate[i] / 60);
-            if (newsHours[i] > 1){
-                newsHours[i] = newsHours[i] + " ore fa:";
+        }else if (newsAll[i][2] >= 60){
+            newsAll[i][2] = Math.round(resultDate[i] / 60);
+            if (newsAll[i][2] > 1){
+                newsAll[i][2] = newsAll[i][2] + " ore fa:";
             }else{
-                newsHours[i] = newsHours[i] + " ora fa:";
+                newsAll[i][2] = newsAll[i][2] + " ora fa:";
             }
         }else{
-            newsHours[i] = resultDate[i];
-            if (newsHours[i] > 1){
-                newsHours[i] = newsHours[i] + " minuti fa:";
+            newsAll[i][2] = newsAll[i][2];
+            if (newsAll[i][2] > 1){
+                newsAll[i][2] = newsAll[i][2] + " minuti fa:";
             }else{
-                newsHours[i] = newsHours[i] + " minuto fa:";
+                newsAll[i][2] = newsAll[i][2] + " minuto fa:";
             }
         }
     }
 };
 
 function bubbleSort() {
-    var length = resultDate.length;
+    var length = allLenght;
     for (var i = (length - 1); i >= 0; i--) { //Number of passes
         for (var j = (length - i); j > 0; j--) {
           //Compare the adjacent positions
-            if(resultDate[j] < resultDate[j-1]) {
+            if(newsAll[j][2] < newsAll[j-1][2]) {
             //Swap the numbers
-                var tmp = resultDate[j];
-                resultDate[j] = resultDate[j-1];
-                resultDate[j-1] = tmp;
+                var tmp = newsAll[j][2];
+                var tmp2 = newsAll[j][0];
+                var tmp3 = newsAll[j][1];
+                newsAll[j][2] = newsAll[j-1][2];
+                newsAll[j][0] = newsAll[j-1][0];
+                newsAll[j][1] = newsAll[j-1][1];
+                newsAll[j-1][2] = tmp;
+                newsAll[j-1][0] = tmp2;
+                newsAll[j-1][1] = tmp3;
             }
         }        
     }

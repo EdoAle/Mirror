@@ -3,17 +3,6 @@ function newsUpdate2() {
 
 //XML send request
 
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (xhttp.readyState == 4 && xhttp.status == 200) {
-            myFunction(xhttp);
-        }
-    };
-    xhttp.open("GET", "http://xml.corriereobjects.it/rss/homepage.xml", true);
-    xhttp.send();
-
-
-//Export the data
 
 var titleNews = [];
 
@@ -29,6 +18,21 @@ var newsName = 'Corriere della Sera';
 
 var newsDate = [];
 
+
+for (var i = 0; i < (newsfeed.url).lenght; i++){
+var xhttp = new XMLHttpRequest();
+xhttp[i].onreadystatechange = function () {
+    if (xhtt[i]p.readyState == 4 && xhttp[i].status == 200) {
+        myFunction(xhttp[i],i);
+    }
+};
+xhttp.open("GET", newsfeed.url[i], true);
+xhttp.send();
+}
+
+
+//Export the data
+
 function myFunction(xml) {
     var i = 0;
     var xmlDoc = xml.responseXML;
@@ -39,7 +43,6 @@ function myFunction(xml) {
         newnewsDate[i] = new Date(newsDate[i]);
         divNews.date[i] = ((cDate - newnewsDate[i])/1000)/60;
     }
-    newsLength = x.length;
     bubbleSort();
     document.getElementById("news-title").innerHTML = divNews.title[0];
 };

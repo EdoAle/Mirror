@@ -1,5 +1,9 @@
 var newsLength;
 
+var allLenght;
+
+var newsAll = [["", "", ""],["", "", ""]]
+
 var divNews = {
     title: [""],
     date: []
@@ -17,7 +21,7 @@ function newsUpdateAll(){
 }
 
 function printNews() {
-    if (f == newsLength) {
+    if (f == allLenght) {
         f = 1;
         newsUpdateAll();
     }
