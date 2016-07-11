@@ -28,10 +28,12 @@ var newsHours = [];
 
 var newsName = 'Corriere della Sera';
 
+var x = '';
+
 function myFunction(xml) {
     var i = 0;
     var xmlDoc = xml.responseXML;
-    var x = xmlDoc.getElementsByTagName("item");
+    x = xmlDoc.getElementsByTagName("item");
     for (i = 0; i < x.length; i++) {
         newsDate[i] = x[i].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue;
         newnewsDate[i] = new Date(newsDate[i]);
@@ -83,6 +85,9 @@ var f = 1;
 // Update the hour
 
 function printHour() {  
+    if (f > x.lenght){
+        newsUpdate();
+    };
     document.getElementById("news-name").innerHTML = newsName + ", " + newsHours[f];
     f++;
 };
@@ -91,5 +96,3 @@ setInterval(printHour, ReloadTime);
 };
 
 newsUpdate();
-
-setInterval(newsUpdate, reloadTime2);

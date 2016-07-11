@@ -10,10 +10,10 @@ var config = {
 var newsfeed = {
         url: [
                 "http://xml.corriereobjects.it/rss/homepage.xml",
-                ""
+                "http://www.repubblica.it/rss/homepage/rss2.0.xml"
         ],
         newsName: [
                 "Corriere della sera",
-                
+                "La Repubblica"
         ]
 }

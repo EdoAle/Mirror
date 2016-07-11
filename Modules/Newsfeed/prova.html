@@ -5,77 +5,95 @@
     <body>
         <div id="news-name"></div>
         <script>
-var ReloadTime = 5000;
-//XML send request
+//GLOBAL VARIABLE
+
+var ReloadTime = 500;
+
+var newsDate = [""];
+
+var resultDate = [""];
+
+var newnewsDate = [""];
+
+var result = [""];
+
+var currentDate = new Date();
+
+var newsHours = [];
+
+var newsName = '';
 
 var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-    if (xhttp.readyState == 4 && xhttp.status == 200) {
-        myFunction(xhttp);
+
+var x = 0;
+
+var k = 0;
+
+var dataStoring = 0;
+
+var xmlLenght = [];
+
+var xmlLenghtTot = [];
+
+//XML send request
+
+for (var i = 0; i < newsfeed.url.lenght; i++){
+    xhttp[i].onreadystatechange = function() {
+        if (xhttp[i].readyState == 4 && xhttp[i].status == 200) {
+            myFunction(xhttp[i]);
+        }
     }
-};
-xhttp.open("GET", "http://xml.corriereobjects.it/rss/homepage.xml", true);
+xhttp.open("GET", newsfeed.url[i], true);
 xhttp.send();
-
-//Export the data
-
-var divNews = {
-    title: [""],
-    date: []
 }
 
-var titleNews = [];
-
-var newnewsDate = [];
-
-var cDate = new Date();
-
-var result = [];
-
-var result1 = [];
-
-var newsName = 'Corriere della Sera';
-
-var newsDate = [];
+//XML DATA STORED
 
 function myFunction(xml) {
-    var i = 0;
     var xmlDoc = xml.responseXML;
-    var x = xmlDoc.getElementsByTagName("item");
-    for (i = 0; i < x.length; i++) {
-        divNews.title[i] = x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
-        newsDate[i] = x[i].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue;
-        newnewsDate[i] = new Date(newsDate[i]);
-        divNews.date[i] = ((cDate - newnewsDate[i])/1000)/60;
+    x = xmlDoc.getElementsByTagName("item");
+    xmlLenght[k] = x.lenght;
+    xmlLenghtTot[] = xmlLenghtTot + x.lenght;
+    for (var i = 0; i < x.length; i++) {
+    newsDate[i] = x[i].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue;
+    newnewsDate[i] = new Date(newsDate[i]);
+    result[i] = ((currentDate - newnewsDate[i])/1000)/60;
+    resultDate[k][i][0] = Math.round(result[k]);
+    newsName[k][i][1] = newsfeed.newsName[k];
     }
-    bubbleSort();
-    document.getElementById("news-name").innerHTML = divNews.title[0];
+    k++;
 };
+
+function combineData{
+    for (var i = 0; i <  xmlLenghtTot)
+}
+
+//DATA CLASSIFICATION
+
 function bubbleSort() {
-      var length = divNews.date.length;
+      var length = resultDate.length;
       for (var i = (length - 1); i >= 0; i--) { //Number of passes
         for (var j = (length - i); j > 0; j--) {
           //Compare the adjacent positions
-          if(divNews.date[j] < divNews.date[j-1]) {
+          if(resultDate[j] < resultDate[j-1]) {
             //Swap the numbers
-            var tmp = divNews.title[j];
-            var tmp2 = divNews.date[j];
-            divNews.title[j] = divNews.title[j-1];
-            divNews.date[j] = divNews.date[j-1];
-            divNews.title[j-1] = tmp;
-            divNews.date[j-1] = tmp2;
+            var tmp = resultDate[j];
+            resultDate[j] = resultDate[j-1];
+            resultDate[j-1] = tmp;
           }
         }        
       }
     }
-var f = 1;
-// Update the title
-function printTitle() { 
-    document.getElementById("news-name").innerHTML = divNews.title[f]; 
-    f++;
-}
 
-setInterval(printTitle, ReloadTime);
+var f = 1;
+
+// Update the hour
+
+function printHour() { 
+    document.getElementById("news-name").innerHTML = newsHours[f];
+    f++;
+}; 
+    setInterval(printHour, ReloadTime);
 
         </script>
     </body>

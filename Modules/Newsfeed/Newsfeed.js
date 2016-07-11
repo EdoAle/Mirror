@@ -71,7 +71,10 @@ function bubbleSort() {
     }
 var f = 1;
 // Update the title
-function printTitle() { 
+function printTitle() {
+    if (f > x.lenght){
+        newsUpdate();
+    };
     document.getElementById("news-title").innerHTML = divNews.title[f]; 
     f++;
 }
@@ -79,6 +82,5 @@ function printTitle() {
 setInterval(printTitle, ReloadTime);
 };
 
-newsUpdate();
 
-setInterval(newsUpdate, reloadTime2);
+newsUpdate();
