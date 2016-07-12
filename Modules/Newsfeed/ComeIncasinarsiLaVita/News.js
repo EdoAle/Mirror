@@ -2,7 +2,7 @@ var newsLength;
 
 var allLenght;
 
-var newsAll = [["", "", ""],["", "", ""]]
+var newsAll = [["", "", ""],["", "", ""]];
 
 var divNews = {
     title: [""],
@@ -25,8 +25,8 @@ function printNews() {
         f = 1;
         newsUpdateAll();
     }
-    document.getElementById("news-title").innerHTML = divNews.title[f];
-    document.getElementById("news-name").innerHTML = newsName + ", " + newsHours[f];
+    document.getElementById("news-title").innerHTML = newsAll[f][1] + ", " + newsAll[i][2];
+    document.getElementById("news-name").innerHTML = newsAll[f][0];
     f++;
 }
 
