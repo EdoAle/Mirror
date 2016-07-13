@@ -16,22 +16,16 @@ var currentDate = new Date();
 
 
 
-for (var i = 0; i < newsfeed.url.lenght; i++){
+for (var i = 0; i < Object.keys(newsfeed.url).length; i++){
 alert("Ciao1");
 var xhttp = new XMLHttpRequest();
 alert("Ciao2");
-xhttp.onreadystatechange = function() {
-    alert("Ciao3");
-    if (xhttp.readyState == 4 && xhttp.status == 200) {
-    alert("Ciao4");
-        myFunction(xhttp,i);
-alert("Ciao5");
-    }
-}
 xhttp.open("GET", newsfeed.url[i], true);
 alert("Ciao6");
 xhttp.send();
 alert("Ciao7");
+myFunction(xhttp,i);
+alert("Ciao3");
 }
 
 function myFunction(xml,k) {
@@ -56,9 +50,9 @@ alert("Ciao16");
 alert("Ciao17");
         newsAll[i][2] = Math.round(result);
 alert("Ciao18");
-        //z++;
+        z++;
 alert("Ciao19");
-        //relativeLenght++;
+        relativeLenght++;
 alert("Ciao20");
     }
 };
