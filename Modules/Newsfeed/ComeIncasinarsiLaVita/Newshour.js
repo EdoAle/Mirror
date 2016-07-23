@@ -16,19 +16,24 @@ var currentDate = new Date();
 
 
 
-for (var i = 0; i < Object.keys(newsfeed.url).length; i++){
-alert("Ciao1");
 var xhttp = new XMLHttpRequest();
+alert("Ciao1");
+xhttp.onreadystatechange = function() {
 alert("Ciao2");
-xhttp.open("GET", newsfeed.url[i], true);
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+alert("Ciao3");
+        myFunction(xhttp);
+alert("Ciao4");
+    }
+};
+alert("Ciao5");
+xhttp.open("GET", "http://xml.corriereobjects.it/rss/homepage.xml", true);
 alert("Ciao6");
 xhttp.send();
 alert("Ciao7");
-myFunction(xhttp,i);
-alert("Ciao3");
-}
 
-function myFunction(xml,k) {
+function myFunction(xml) {
+    var k = 0;
 alert("Ciao8");
     var xmlDoc = xml.responseXML;
 alert("Ciao9");
@@ -36,7 +41,7 @@ alert("Ciao9");
 alert("Ciao10");
     var z = 0;
 alert("Ciao11");
-    for (var i = relativeLenght; i < x.lenght; i++) {
+    for (var i = relativeLenght; i < (relativeLenght + x.lenght); i++) {
 alert("Ciao12");
         newsDate = x[z].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue;
 alert("Ciao13");

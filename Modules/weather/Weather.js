@@ -2,7 +2,7 @@
  * Created by alebe on 02/07/2016.
  */
 
-forecastDays = 6;
+forecastDays = 8;
 
 var cUpdateTime = 1800000;
 var fUpdateTime = 7200000;

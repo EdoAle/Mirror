@@ -22,7 +22,7 @@ var newsDate = [];
 for (var i = 0; i < (newsfeed.url).lenght; i++){
 var xhttp = new XMLHttpRequest();
 xhttp[i].onreadystatechange = function () {
-    if (xhtt[i]p.readyState == 4 && xhttp[i].status == 200) {
+    if (xhtt[i].readyState == 4 && xhttp[i].status == 200) {
         myFunction(xhttp[i],i);
     }
 };
@@ -33,15 +33,12 @@ xhttp.send();
 
 //Export the data
 
-function myFunction(xml) {
-    var i = 0;
+function myFunction(xml,k) {
     var xmlDoc = xml.responseXML;
     var x = xmlDoc.getElementsByTagName("item");
-    for (i = 0; i < x.length; i++) {
-        divNews.title[i] = x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
-        newsDate[i] = x[i].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue;
-        newnewsDate[i] = new Date(newsDate[i]);
-        divNews.date[i] = ((cDate - newnewsDate[i])/1000)/60;
+    allLenght = allLenght + x.lenght;
+    var relativeLenght = allLenght - x.lenght;
+    for (var i = relativeLenght; i < allLenght; i++) {;
     }
     bubbleSort();
     document.getElementById("news-title").innerHTML = divNews.title[0];
