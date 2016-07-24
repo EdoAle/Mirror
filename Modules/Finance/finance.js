@@ -1,8 +1,7 @@
-updateTime = 5000;
+updateTime = 1000;
 
 function financeUpdate() {
     
-
 
 function printFinance(arr) {
 
@@ -12,8 +11,14 @@ function printFinance(arr) {
 
         document.getElementById("symbol" + i).innerHTML = arr.query.results.quote[i].Symbol;
         document.getElementById("bid" + i).innerHTML = arr.query.results.quote[i].LastTradePriceOnly;
-        document.getElementById("PercentChange" + i).innerHTML = arr.query.results.quote[i].PercentChange;
-
+        var div = arr.query.results.quote[i].PercentChange;
+        if (div[0] == "+"){
+            document.getElementById("PercentChange" + i).innerHTML = div + "&#32;" + '<i class="material-icons">trending_up </i>';
+        }else if(div[0] == "-"){
+            document.getElementById("PercentChange" + i).innerHTML = div + "&#32;" + '<i class="material-icons">trending_down </i>';
+        }else{
+            document.getElementById("PercentChange" + i).innerHTML = div;
+        }
     }
 }
 
@@ -33,55 +38,3 @@ xmlhttp.send();
 financeUpdate();
 
 setInterval(financeUpdate, updateTime)
-   /*
-    
-    var out = "";
-    out0 = arr.query.results.quote[0].PercentChange;
-    out1 = arr.query.results.quote[0].Bid;
-    out2 = arr.query.results.quote[0].Symbol;
-    out3 = arr.query.results.quote[1].PercentChange;
-    out4 = arr.query.results.quote[1].Bid;
-    out5 = arr.query.results.quote[1].Symbol;
-    out6 = arr.query.results.quote[2].PercentChange;
-    out7 = arr.query.results.quote[2].Bid;
-    out8 = arr.query.results.quote[2].Symbol;
-    out9 = arr.query.results.quote[3].PercentChange;
-    out10 = arr.query.results.quote[3].Bid;
-    out11 = arr.query.results.quote[3].Symbol;
-    out12 = arr.query.results.quote[4].PercentChange;
-    out13 = arr.query.results.quote[4].Bid;
-    out14 = arr.query.results.quote[4].Symbol;
-    out15 = arr.query.results.quote[5].PercentChange;
-    out16 = arr.query.results.quote[5].Bid;
-    out17 = arr.query.results.quote[5].Symbol;
-    out18 = arr.query.results.quote[6].PercentChange;
-    out19 = arr.query.results.quote[6].Bid;
-    out20 = arr.query.results.quote[6].Symbol;
-    out21 = arr.query.results.quote[7].PercentChange;
-    out22 = arr.query.results.quote[7].Bid;
-    out23 = arr.query.results.quote[7].Symbol;
-    document.getElementById("finance0").innerHTML = out0;
-    document.getElementById("finance1").innerHTML = out1;
-    document.getElementById("finance2").innerHTML = out2;
-    document.getElementById("finance3").innerHTML = out3;
-    document.getElementById("finance4").innerHTML = out4;
-    document.getElementById("finance5").innerHTML = out5;
-    document.getElementById("finance6").innerHTML = out6;
-    document.getElementById("finance7").innerHTML = out7;
-    document.getElementById("finance8").innerHTML = out8;
-    document.getElementById("finance9").innerHTML = out9;
-    document.getElementById("finance10").innerHTML = out10;
-    document.getElementById("finance11").innerHTML = out11;
-    document.getElementById("finance12").innerHTML = out12;
-    document.getElementById("finance13").innerHTML = out13;
-    document.getElementById("finance14").innerHTML = out14;
-    document.getElementById("finance15").innerHTML = out15;
-    document.getElementById("finance16").innerHTML = out16;
-    document.getElementById("finance17").innerHTML = out17;
-    document.getElementById("finance18").innerHTML = out18;
-    document.getElementById("finance19").innerHTML = out19;
-    document.getElementById("finance20").innerHTML = out20;
-    document.getElementById("finance21").innerHTML = out21;
-    document.getElementById("finance22").innerHTML = out22;
-    document.getElementById("finance23").innerHTML = out23;
-}*/
