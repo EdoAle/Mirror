@@ -1,4 +1,4 @@
-updateTime = 1000;
+updateTime = 5000;
 
 function financeUpdate() {
     
