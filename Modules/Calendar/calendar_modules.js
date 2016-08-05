@@ -1,20 +1,28 @@
 /**
- * Created by alebe on 03/07/2016.
+ * Created by edosca on 05/08/2016.
  */
 
-
-    var ical = require('https://calendar.google.com/calendar/ical/it.italian%23holiday%40group.v.calendar.google.com/public/basic.ics')
-  , months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+var ical = require('ical'),
+months = ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre']
  
-    ical.fromURL('http://lanyrd.com/topics/nodejs/nodejs.ics', {}, function(err, data) {
-      for (var k in data){
-        if (data.hasOwnProperty(k)) {
-          var ev = data[k]
-          console.log("Conference",
-            ev.summary,
-            'is in',
-            ev.location,
-            'on the', ev.start.getDate(), 'of', months[ev.start.getMonth()]);
-        }
-      }
-    });
+var e = 0;
+var f = 0;
+var control = [""];
+
+ical.fromURL('https://calendar.google.com/calendar/ical/it.italian%23holiday%40group.v.calendar.google.com/public/basic.ics', {}, function(err, data) {
+for (var k in data){
+  if (data.hasOwnProperty(k)) {
+    e = e +1;
+    var ev = data[k];
+    var summary = ev.summary;
+    control[e] = summary;
+    if (control[e] == control[e-1]){
+      f = f + 0;
+    }else{
+      var dstart = new Date(ev.start);
+      f = f +1;
+      document.getElementById("calendar-events-maj" + f).innerHTML = summary + ' il ' + dstart.getDate() + ' di ' + months[dstart.getMonth()] + " " + f + "<br />";
+    }
+  }
+}
+});
