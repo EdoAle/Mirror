@@ -11,9 +11,9 @@
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <script type="text/javascript" src="Modules/weather/weather_module.js"></script>
       <script src="jquery-3.0.0.js"></script>
-      <script src="Modules/Calendar/calendar_modules.js"></script>
   </head>
     <body onload="startTime()">
+      <div id="compliments">Ehi Ciao!</div>
     	<div class="weather-box">
         <div class="data-weather-maj">
           <span id="name">Treviso</span>
@@ -46,22 +46,52 @@
         </div>
       </div>
 		      <div class="calendar-box">
-		            <div class="calendar-events-max">I tuoi appuntamenti</div>
-		            <div id="calendar-events-maj1"></div>
-		            <div id="calendar-events-maj2"></div>
-		            <div id="calendar-events-maj3"></div>
-		            <div id="calendar-events-maj4"></div>
-		            <div id="calendar-events-maj5"></div>
-		            <div id="calendar-events-maj6"></div>
-		            <div id="calendar-events-maj7"></div>
-		            <div id="calendar-events-maj8"></div>
+		            <div class="calendar-events-max">I TUOI APPUNTAMENTI</div>
+		            <div id="calendar-events-maj">
+                  <div id="summary1">Caricamento...</div>
+                  <div id="datecal1"></div>
+                </div>
+		            <div id="calendar-events-maj">
+                  <div id="summary2"></div>
+                  <div id="datecal2"></div>
+                </div>
+		            <div id="calendar-events-maj">
+                  <div id="summary3"></div>
+                  <div id="datecal3"></div>
+                </div>
+		            <div id="calendar-events-maj">
+                  <div id="summary4"></div>
+                  <div id="datecal4"></div>
+                </div>
+		            <div id="calendar-events-maj">
+                  <div id="summary5"></div>
+                  <div id="datecal5"></div>
+                </div>
+		            <div id="calendar-events-maj">
+                  <div id="summary6"></div>
+                  <div id="datecal6"></div>
+                </div>
+		            <div id="calendar-events-maj">
+                  <div id="summary7"></div>
+                  <div id="datecal7"></div>
+                </div>
+		            <div id="calendar-events-maj">
+                  <div id="summary8"></div>
+                  <div id="datecal8"></div>
+                </div>
 		          </div>
 		      </div>
       <div id="news">
 		    <div id="news-name">Caricamento...</div>
 		    <div id="news-title">Caricamento...</div>
       </div>
-      <div id="txt"></div>
+      <div id="txt">
+        <div id="Data"></div>
+        <div id="Ora">
+          <div id="ora1"></div>
+          <div id="ora2"></div>
+        </div>
+      </div>
         <div id="finance-box">
           <div class="finance-box-min">
             <div id="symbol0">Caricamento...</div>
@@ -113,5 +143,6 @@
         <script type="text/javascript" src="Modules/Newsfeed/Newsfeed.js"></script>
       <script type="text/javascript" src="Modules/Newsfeed/Newshour.js"></script>
         <script type="text/javascript" src="Modules/Newsfeed/News.js"></script>
+      <script src="Modules/Calendar/calendar_modules.js"></script>
     </body>
 </html>

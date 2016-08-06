@@ -21,7 +21,8 @@ for (var k in data){
     }else{
       var dstart = new Date(ev.start);
       f = f +1;
-      document.getElementById("calendar-events-maj" + f).innerHTML = summary + ' il ' + dstart.getDate() + ' di ' + months[dstart.getMonth()] + " " + f + "<br />";
+      document.getElementById("summary" + f).innerHTML = ' <i class="material-icons" style="font-size:17px">event</i> ' + summary;
+      document.getElementById("datecal" + f).innerHTML = dstart.getDate() + ' ' + months[dstart.getMonth()];
     }
   }
 }

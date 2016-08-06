@@ -17,6 +17,15 @@
   font-family: 'Roboto';
   src: url(Roboto-Thin.ttf);
 }
+/*---COMPLIMENTS PROPERTIES---------------------------------------------------*/
+
+#compliments{
+  width: 100%;
+  font-size: 70px;
+  text-align: center;
+  position: fixed;
+  top: 44%;
+}
 
 /*---BODY PROPERTIES----------------------------------------------------------*/
 
@@ -162,52 +171,147 @@ span#day1.days{
 /*---CALENDAR PROPERTIES-------------------------------------------------------*/
 
 .calendar-box{
-  width: 400px;
+  width: 360px;
   height: 400px;
   display: block;
   text-align: right;
   position: fixed;
-  right:0.5%;
+  right:0.7%;
+  top: 10%;
   border-radius: 25px;
   border: 2px solid #000;
   color: #fff;
 }
 
-#calendar-events-maj1,
-#calendar-events-maj2,
-#calendar-events-maj3,
-#calendar-events-maj4,
-#calendar-events-maj5,
-#calendar-events-maj6,
-#calendar-events-maj7,
-#calendar-events-maj8{
-  height: 41px;
-  width: 100%;
+#calendar-events-maj{
+  width: 360px;
+  height: 25px;
   font-size: 18px;
+}
+
+#summary1,
+#summary2,
+#summary3,
+#summary4,
+#summary5,
+#summary6,
+#summary7,
+#summary8{
+  height: 100%;
+  width: 240px;
+  font-size: 19px;
   text-align: left;
-  position: relative;
-  color: white;
-  left: 1%;
+  display: inline-block;
+}
+
+#summary4{
+  opacity: 0.8 !important;
+}
+
+#summary5{
+  opacity: 0.6 !important;
+}
+
+#summary6{
+  opacity: 0.4 !important;
+}
+
+#summary7{
+  opacity: 0.25;
+}
+
+#summary8{
+  opacity: 0.1;
+}
+
+#datecal1,
+#datecal2,
+#datecal3,
+#datecal4,
+#datecal5,
+#datecal6,
+#datecal7,
+#datecal8{
+  height: 100%;
+  width: 115px;
+  font-size: 19px;
+  text-align: right;
+  display: inline-block;
+}
+
+#datecal4{
+  opacity: 0.8 !important;
+}
+
+#datecal5{
+  opacity: 0.6 !important;
+}
+
+#datecal6{
+  opacity: 0.4 !important;
+}
+
+#datecal7{
+  opacity: 0.25;
+}
+
+#datecal8{
+  opacity: 0.1;
 }
 
 .calendar-events-max{
-  height: 70px;
+  height: 45px;
   width: 100%;
-  font-size: 36px;
+  font-size: 16px;
   line-height: 70px;
-  text-align: center;
+  text-align: right;
+  border-bottom: 1px solid rgba(255,255,255,0.7);
 }
 
 /*---CLOCK PROPERTIES-------------------------------------------------------*/
 
 #txt{
   position: fixed;
-  top: 44.2%;
-  right: 40.5%;
-  font-size: 50px;
+  width: 400px;
+  top: 1%;
+  right: 0%;
+  font-size: 40px;
   color: #fff;
-  text-align: center;
+  text-align: right;
 }
+
+#Data{
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: right;
+  font-size: 30px;
+  opacity: 0.6;
+}
+
+#Ora{
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: right;
+}
+
+#ora1{
+  font-size: 70px;
+  display: inline-block;
+}
+
+#ora2{
+  height: 100%;
+  font-size: 30px;
+  opacity: 0.4;
+  display: inline-block;
+  position: relative;
+  top: -3%;
+  left: -2%;
+}
+
+
 
 
 /*---LAST BOX PROPERTIES----------------------------------------------------*/
