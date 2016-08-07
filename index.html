@@ -10,39 +10,40 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <script type="text/javascript" src="Modules/weather/weather_module.js"></script>
+      <script type="text/javascript" src="Modules/clock/clock.js"></script>
       <script src="jquery-3.0.0.js"></script>
   </head>
     <body onload="startTime()">
       <div id="compliments">Ehi Ciao!</div>
     	<div class="weather-box">
         <div class="data-weather-maj">
-          <span id="name">Treviso</span>
+          <span id="name">Caricamento Meteo...</span>
           <span id="temp"><span id="temp-const"></span></br><span id="temp-norm"></span></br><span id="hum"></span></span>
           <i id="icond"></i>
         </div>
         <div class="data-weather-min">
-          <span class="days" id="day1">Domani</span>
-          <span class="days-icons" id="day1.temp"><i id="day1.ico" class="wi wi-day-cloudy"></i></span>
+          <span class="days" id="day1">Caricamento...</span>
+          <span class="days-icons" id="day1.temp"></span>
         </div>
         <div class="data-weather-min">
-          <span class="days" id="day2">Mercoledi</span>
-          <span class="days-icons" id="day2.temp"><i  id="day2.ico" class="wi wi-day-cloudy"></i></span>
+          <span class="days" id="day2"></span>
+          <span class="days-icons" id="day2.temp"></span>
         </div>
         <div class="data-weather-min">
-          <span class="days" id="day3">Mercoledi</span>
-          <span class="days-icons" id="day3.temp">28°<i id="day3.ico" class="wi wi-day-cloudy"></i></span>
+          <span class="days" id="day3"></span>
+          <span class="days-icons" id="day3.temp"></span>
         </div>
         <div class="data-weather-min">
-          <span class="days" id="day4">Mercoledi</span>
-          <span class="days-icons" id="day4.temp">28°<i id="day4.ico" class="wi wi-day-cloudy"></i></span>
+          <span class="days" id="day4"></span>
+          <span class="days-icons" id="day4.temp"></span>
         </div>
         <div class="data-weather-min">
-          <span class="days" id="day5">Mercoledi</span>
-          <span class="days-icons" id="day5.temp">28°<i id="day5.ico" class="wi wi-day-cloudy"></i></span>
+          <span class="days" id="day5"></span>
+          <span class="days-icons" id="day5.temp"></span>
         </div>
         <div class="data-weather-min">
-          <span class="days" id="day6">Mercoledi</span>
-          <span class="days-icons" id="day6.temp">28°<i id="day6.ico" class="wi wi-day-cloudy"></i></span>
+          <span class="days" id="day6"></span>
+          <span class="days-icons" id="day6.temp"></span>
         </div>
       </div>
 		      <div class="calendar-box">
@@ -82,8 +83,8 @@
 		          </div>
 		      </div>
       <div id="news">
-		    <div id="news-name">Caricamento...</div>
-		    <div id="news-title">Caricamento...</div>
+		    <div id="news-name">Caricamento News...</div>
+		    <div id="news-title">Caricamento News...</div>
       </div>
       <div id="txt">
         <div id="Data"></div>
@@ -94,7 +95,7 @@
       </div>
         <div id="finance-box">
           <div class="finance-box-min">
-            <div id="symbol0">Caricamento...</div>
+            <div id="symbol0">Caricamento Finance...</div>
             <div id="bid0"> </div>
             <div id="PercentChange0"> </div>
           </div>
@@ -139,7 +140,6 @@
       <script src="Modules/Finance/finance.js"></script>
       <script src="Modules/Maps/map.js"></script>
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6Pa77yiFVJQbWUrrxeM9Van3-WIYV-NM&callback=initMap" async defer></script>
-      <script type="text/javascript" src="Modules/clock/clock.js"></script>
       <script type="text/javascript" src="Modules/weather/Weather.js"></script>
         <script type="text/javascript" src="Modules/Newsfeed/Newsfeed.js"></script>
       <script type="text/javascript" src="Modules/Newsfeed/Newshour.js"></script>
