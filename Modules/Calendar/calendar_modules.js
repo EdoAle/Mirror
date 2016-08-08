@@ -1,6 +1,12 @@
-/**
- * Created by edosca on 05/08/2016.
- */
+/*
+*  Copyright (C) 2016 EdoAle
+*
+*  This program isn't free software: you can't redistribute it and/or modify
+*  it , or any later version.
+*
+*  Version 1.0
+*  Author: Alessandro Benetton, Edoardo Scarpel
+*/
 var updateCal = 1800000;
 
 function reloadCalendar() {

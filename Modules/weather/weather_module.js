@@ -1,6 +1,13 @@
-/**
- * Created by alebe on 02/07/2016.
- */
+/*
+*  Copyright (C) 2016 EdoAle
+*
+*  This program isn't free software: you can't redistribute it and/or modify
+*  it , or any later version.
+*
+*  Version 1.0
+*  Author: Alessandro Benetton, Edoardo Scarpel
+*/
+
 //DAQ Part CURRENT WEATHER
 
 function getcWeather() {
