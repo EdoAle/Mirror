@@ -33,68 +33,88 @@ var compliments = {
 };
 
 var tn = new Date();
-var hn = tn.getHours();
+var hn = tn.getHours(); 
 
-function complimentsUpdate() {
+  function fadeOut(id,val){ if(isNaN(val)){ val = 9;}
+  document.getElementById(id).style.opacity='0.'+val;
+  //For IE
+  document.getElementById(id).style.filter='alpha(opacity='+val+'0)';
+  if(val>0){
+    val--;
+    setTimeout('fadeOut("'+id+'",'+val+')',90);
+  }else{return;}
+}
 
-if (hn > 5 && hn < 12){
-    if (q > Object.keys(compliments.morning).length){
-        q = 0;
-        complimentsUpdate();
-    }
-    function printCompliments() {
+function fadeIn(id,val){
+// ID of the element to fade, Fade value[min value is 0]
+  if(isNaN(val)){ val = 0;}
+  document.getElementById(id).style.opacity='0.'+val;
+  //For IE
+  document.getElementById(id).style.filter='alpha(opacity='+val+'0)';
+  if(val<9){
+    val++;
+    setTimeout('fadeIn("'+id+'",'+val+')',90);
+  }else{return;}
+}
+
+function updateComp(){
+    if (hn > 5 && hn < 12){
+        if (q > 0){
+            fadeOut("compliments");
+        }
+        fadeIn("compliments");
+        if (q == Object.keys(compliments.morning).length){
+            q = 0;
+        }
         document.getElementById("compliments").innerHTML = compliments.morning[q];
         q++;
     }
-    setInterval(printCompliments, 10000);
-}
-
-if (hn > 11 && hn < 15){
-    if (q > Object.keys(compliments.lunch).length){
-        q = 0;
-        complimentsUpdate();
-    }
-    function printCompliments() {
+    if (hn > 11 && hn < 15){
+        if (q > 0){
+            fadeOut("compliments");
+        }
+        fadeIn("compliments");
+        if (q == Object.keys(compliments.lunch).length){
+            q = 0;
+        }
         document.getElementById("compliments").innerHTML = compliments.lunch[q];
         q++;
     }
-    setInterval(printCompliments, 10000);
-}
-
-if (hn > 14 && hn < 19){
-    if (q > Object.keys(compliments.afternoon).length){
-        q = 0;
-        complimentsUpdate();
-    }
-    function printCompliments() {
+    if (hn > 14 && hn < 19){
+        if (q > 0){
+            fadeOut("compliments");
+        }
+        fadeIn("compliments");
+        if (q == Object.keys(compliments.afternoon).length){
+            q = 0;
+        }
         document.getElementById("compliments").innerHTML = compliments.afternoon[q];
         q++;
     }
-    setInterval(printCompliments, 10000);
-}
-
-if (hn > 18 && hn < 23){
-    if (q > Object.keys(compliments.evening).length){
-        q = 0;
-        complimentsUpdate();
-    }
-    function printCompliments() {
+    if (hn > 18 && hn < 23){
+        if (q > 0){
+            fadeOut("compliments");
+        }
+        fadeIn("compliments");
+        if (q == Object.keys(compliments.evening).length){
+            q = 0;
+        }
         document.getElementById("compliments").innerHTML = compliments.evening[q];
         q++;
     }
-    setInterval(printCompliments, 10000);
-}
-
-if (hn > 22 && hn < 6){
-    if (q > Object.keys(compliments.night).length){
-        q = 0;
-        complimentsUpdate();
-    }
-    function printCompliments() {
+    if (hn > 22 && hn < 6){
+        if (q > 0){
+            fadeOut("compliments");
+        }
+        fadeIn("compliments");
+        if (q == Object.keys(compliments.night).length){
+            q = 0;
+        }
         document.getElementById("compliments").innerHTML = compliments.night[q];
         q++;
     }
-    setInterval(printCompliments, 10000);
 }
 
-}
+updateComp();
+
+setInterval(updateComp, 20000);
