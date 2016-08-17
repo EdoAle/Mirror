@@ -7,7 +7,7 @@
 *  Version 1.0
 *  Author: Alessandro Benetton, Edoardo Scarpel
 */
-$(Document).ready(function{
+//$(Document).ready(function{
 var q = 0;
 
 var compliments = {
@@ -126,4 +126,4 @@ updateComp();
 
 setInterval(updateComp, (5*1000));
 
-});
+//});
