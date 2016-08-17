@@ -7,7 +7,7 @@
 *  Version 1.0
 *  Author: Alessandro Benetton, Edoardo Scarpel
 */
-$(Document).ready(function{
+
 var q = 0;
 
 var compliments = {
@@ -21,23 +21,21 @@ var compliments = {
         "Buon pranzo!"
     ],
     afternoon:[
-        "Sei stanco? Meglio se fai un riposino!",
-        "Esci con gli amici?"
+        "Sei stanco? Meglio se fai un riposino!"
     ],
     evening:[
         "Pronto per uscire?",
         "Buona cena!"
     ],
     night:[
-        "Buonanotte!",
-        "Fai bei sogni!"
+        "Buonanotte!"
     ]
 };
 
 var tn = new Date();
 var hn = tn.getHours(); 
 
-function fadeOut(id,val){ if(isNaN(val)){ val = 9;}
+/*function fadeOut(id,val){ if(isNaN(val)){ val = 9;}
   document.getElementById(id).style.opacity='0.'+val;
   //For IE
   document.getElementById(id).style.filter='alpha(opacity='+val+'0)';
@@ -57,17 +55,16 @@ function fadeIn(id,val){
     val++;
     setTimeout('fadeIn("'+id+'",'+val+')',90);
   }else{return;}
-}
+}*/
+
 
 
 function updateComp(){
     if (hn > 5 && hn < 12){
         if (q > 0){
-            fadeOut("compliments");
         //$("#compliments").fadeTo("slow", 0);
-        }
-        fadeIn("compliments");
         //$("#compliments").fadeTo("slow", 1);
+        }
         if (q == Object.keys(compliments.morning).length){
             q = 0;
         }
@@ -88,9 +85,7 @@ function updateComp(){
     if (hn > 14 && hn < 19){
         if (q > 0){
             fadeOut("compliments");
-        //$("#compliments").fadeTo("slow", 0);
         }
-        //$("#compliments").fadeTo("slow", 0);
         fadeIn("compliments");
         if (q == Object.keys(compliments.afternoon).length){
             q = 0;
@@ -124,6 +119,4 @@ function updateComp(){
 
 updateComp();
 
-setInterval(updateComp, (5*1000));
-
-});
+setInterval(updateComp, 5000);
