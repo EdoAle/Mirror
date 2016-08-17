@@ -37,7 +37,7 @@ var compliments = {
 var tn = new Date();
 var hn = tn.getHours(); 
 
-function fadeOut(id,val){ if(isNaN(val)){ val = 9;}
+/*function fadeOut(id,val){ if(isNaN(val)){ val = 9;}
   document.getElementById(id).style.opacity='0.'+val;
   //For IE
   document.getElementById(id).style.filter='alpha(opacity='+val+'0)';
@@ -57,6 +57,32 @@ function fadeIn(id,val){
     val++;
     setTimeout('fadeIn("'+id+'",'+val+')',90);
   }else{return;}
+}*/
+
+function fadeIn(el){
+    var val = 0;
+    document.getElementById(el).style.opacity = val;
+    function fade(){
+        val += .1;
+        document.getElementById(el).style.opacity = val;
+        if (val < 1){
+            setTimeout(fade(), 90);
+        }
+    }
+    fade();   
+}
+
+function fadeOut(el){
+    var val = 1;
+    document.getElementById(el).style.opacity = val;
+    function fade(){
+        val -= .1;
+        document.getElementById(el).style.opacity = val;
+        if (val > 0){
+            setTimeout(fade(), 90);
+        }
+    }
+    fade();   
 }
 
 
