@@ -34,8 +34,6 @@ var compliments = {
     ]
 };
 
-var tn = new Date();
-var hn = tn.getHours(); 
 
 /*function fadeOut(id,val){ if(isNaN(val)){ val = 9;}
   document.getElementById(id).style.opacity='0.'+val;
@@ -87,6 +85,8 @@ function fadeOut(el){
 
 
 function updateComp(){
+    var tn = new Date();
+    var hn = tn.getHours(); 
     if (hn > 5 && hn < 12){
         if (q > 0){
             fadeOut("compliments");
