@@ -58,7 +58,7 @@ function fadeIn(id,val){
 }*/
 
 function fadeIn(el){
-    var val = 0;
+    /*var val = 0;
     document.getElementById(el).style.opacity = val;
     function fade(){
         val += .1;
@@ -67,11 +67,11 @@ function fadeIn(el){
             setTimeout(fade(), 90);
         }
     }
-    fade();   
+    fade();   */
 }
 
 function fadeOut(el){
-    var val = 1;
+    /*var val = 1;
     document.getElementById(el).style.opacity = val;
     function fade(){
         val -= .1;
@@ -80,7 +80,7 @@ function fadeOut(el){
             setTimeout(fade(), 90);
         }
     }
-    fade();   
+    fade(); */  
 }
 
 
@@ -150,6 +150,6 @@ function updateComp(){
 
 updateComp();
 
-setInterval(updateComp, (5*1000));
+setInterval(updateComp, (60*1000));
 
 //});
