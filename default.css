@@ -100,7 +100,7 @@ body{
 
 #name{
   position: relative;
-  width:133px;
+  min-width:133px;
   left:3%;
   top: 2%;
   font-size: 32px;
