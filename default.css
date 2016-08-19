@@ -11,25 +11,25 @@
 
 @font-face{
   font-family: 'Adequate1';
-  src: url(Adequate-ExtraLight.ttf);
+  src: url(fonts/Adequate-ExtraLight.ttf);
 }
 @font-face{
   font-family: 'San Francisco';
-  src: url(San_Francisco_Display_Ultralight.ttf);
+  src: url(fonts/San_Francisco_Display_Ultralight.ttf);
 }
 @font-face{
   font-family: 'Distyrict Pro';
-  src: url(DistProTh.otf);
+  src: url(fonts/DistProTh.otf);
 }
 @font-face{
   font-family: 'Roboto';
-  src: url(Roboto-Thin.ttf);
+  src: url(fonts/Roboto-Thin.ttf);
 }
 @font-face{
   font-family: 'RobotoLight';
   font-style: normal;
   font-weight: 100 !important;
-  src: url(Hgo13k-tfSpn0qi1SFdUfbO3LdcAZYWl9Si6vvxL-qU.woff);
+  src: url(fonts/Hgo13k-tfSpn0qi1SFdUfbO3LdcAZYWl9Si6vvxL-qU.woff);
 }
 /*---COMPLIMENTS PROPERTIES---------------------------------------------------*/
 

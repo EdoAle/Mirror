@@ -47,4 +47,4 @@ setInterval(function(){
   var targetNews = document.getElementById("news-title");
   var target1News = document.getElementById("news-name");
   printNews(targetNews, target1News);
-}, 5 * 1000);
+}, 10 * 1000);

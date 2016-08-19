@@ -17,8 +17,8 @@ var compliments = {
       "Pronto per affrontare questa giornata?"
     ],
     lunch:[
-      "Hai fame? Ehehe credo proprio di si!",
-      "Buon pranzo!"
+      "Buon pranzo!",
+      "Hai fame? Ehehe credo proprio di si!"
     ],
     afternoon:[
       "Sei stanco? Meglio se fai un riposino!",
