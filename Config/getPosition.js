@@ -1,7 +1,13 @@
-var lat;
-var lng;
-navigator.geolocation.getCurrentPosition(function(position) {
-     // Get the coordinates of the current position.
-    lat = position.coords.latitude;
-    lng = position.coords.longitude;
+var triangulate = require('wifi-triangulate')
+
+var latitude1 = 0;
+var longitude1 = 0;
+ 
+triangulate(function (err, location) {
+  //if (err) throw err
+  var latitude = location.lat;
+  var longitude = location.lng;
+  latitude1 = latitude;
+  longitude1 = longitude;
+  console.log(latitude1 + " " + longitude1); 
 });

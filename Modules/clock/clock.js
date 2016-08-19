@@ -32,7 +32,7 @@ function startTime() {
     ];
     m = checkTime(m);
     s = checkTime(s);
-    document.getElementById('Data').innerHTML = days[n] + ", " + d + " " + months[mo] + " " + y; 
+    document.getElementById('Data').innerHTML = days[n-1] + ", " + d + " " + months[mo] + " " + y; 
     document.getElementById('ora1').innerHTML = h + ":" + m;
     document.getElementById('ora2').innerHTML = s;
     var t = setTimeout(startTime, 1000);
