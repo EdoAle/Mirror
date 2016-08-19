@@ -39,14 +39,14 @@ function updateComp(target){
   var hn = tn.getHours(); 
   var ss = tn.getSeconds();
 
-  var comp = (function(ss, allComps){
+  var comp = (function(hn, allComps){
     if (hn > 5 && hn < 12) { return allComps.morning; }
     if (hn > 11  && hn < 15) { return allComps.lunch; }
     if (hn > 14  && hn < 19) { return allComps.afternoon; }
     if (hn > 18  && hn < 23) { return allComps.evening; }
-    //if (hn > 22  && hn < 6) { return allComps.night; }
+    if (hn > 22  && hn < 6) { return allComps.night; }
     return [""];
-  })(ss, compliments);
+  })(hn, compliments);
   
   // ----------------
   // get the "next" compliment
@@ -73,6 +73,6 @@ function updateComp(target){
 setInterval(function(){
   var target = document.getElementById("compliments");
   updateComp(target);
-}, 20 * 1000);
+}, 60 * 1000);
 
 //});
