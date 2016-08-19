@@ -11,8 +11,8 @@ var config = {
         api: "02742dc10bd38602ed5b5053b6382199",
         unit: "metric",
         language: "it",
-        /*lat: latitude,
-        lng: longitude*/
+        lat: latitude,
+        lng: longitude
 }
 var newsfeed = {
         url: [
