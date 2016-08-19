@@ -12,144 +12,67 @@ var q = 0;
 
 var compliments = {
     morning:[
-        "Buongiorno!",
-        "Ti vedo in forma!",
-        "Pronto per affrontare questa giornata?"
+      "Buongiorno!",
+      "Ti vedo in forma!",
+      "Pronto per affrontare questa giornata?"
     ],
     lunch:[
-        "Hai fame? Ehehe credo proprio di si!",
-        "Buon pranzo!"
+      "Hai fame? Ehehe credo proprio di si!",
+      "Buon pranzo!"
     ],
     afternoon:[
-        "Sei stanco? Meglio se fai un riposino!",
-        "Esci con gli amici?"
+      "Sei stanco? Meglio se fai un riposino!",
+      "Esci con gli amici?"
     ],
     evening:[
-        "Pronto per uscire?",
-        "Buona cena!"
+      "Pronto per uscire?",
+      "Buona cena!"
     ],
     night:[
-        "Buonanotte!",
-        "Fai bei sogni!"
+      "Buonanotte!",
+      "Fai bei sogni!"
     ]
 };
 
+function updateComp(target){
+  var tn = new Date();
+  var hn = tn.getHours(); 
+  var ss = tn.getSeconds();
 
-/*function fadeOut(id,val){ if(isNaN(val)){ val = 9;}
-  document.getElementById(id).style.opacity='0.'+val;
-  //For IE
-  document.getElementById(id).style.filter='alpha(opacity='+val+'0)';
-  if(val>0){
-    val--;
-    setTimeout('fadeOut("'+id+'",'+val+')',90);
-  }else{return;}
+  var comp = (function(ss, allComps){
+    if (hn > 5 && hn < 12) { return allComps.morning; }
+    if (hn > 11  && hn < 15) { return allComps.lunch; }
+    if (hn > 14  && hn < 19) { return allComps.afternoon; }
+    if (hn > 18  && hn < 23) { return allComps.evening; }
+    //if (hn > 22  && hn < 6) { return allComps.night; }
+    return [""];
+  })(ss, compliments);
+  
+  // ----------------
+  // get the "next" compliment
+  // ----------------
+  q = q % Object.keys(comp).length;
+  var currentComp = comp[q];
+  q++;
+  // ----------------
+  
+  // ----------------
+  // fade the existing compliment then replace it and fade in.
+  // ----------------
+  var className = "ghost";
+  var duration = 1000;
+
+  target.classList.add(className);
+  setTimeout(function(){
+    target.innerText = currentComp;
+    target.classList.remove(className);
+  }, duration);
+  // ----------------
 }
 
-function fadeIn(id,val){
-// ID of the element to fade, Fade value[min value is 0]
-  if(isNaN(val)){ val = 0;}
-  document.getElementById(id).style.opacity='0.'+val;
-  //For IE
-  document.getElementById(id).style.filter='alpha(opacity='+val+'0)';
-  if(val<9){
-    val++;
-    setTimeout('fadeIn("'+id+'",'+val+')',90);
-  }else{return;}
-}*/
-
-function fadeIn(el){
-    /*var val = 0;
-    document.getElementById(el).style.opacity = val;
-    function fade(){
-        val += .1;
-        document.getElementById(el).style.opacity = val;
-        if (val < 1){
-            setTimeout(fade(), 90);
-        }
-    }
-    fade();   */
-}
-
-function fadeOut(el){
-    /*var val = 1;
-    document.getElementById(el).style.opacity = val;
-    function fade(){
-        val -= .1;
-        document.getElementById(el).style.opacity = val;
-        if (val > 0){
-            setTimeout(fade(), 90);
-        }
-    }
-    fade(); */  
-}
-
-
-function updateComp(){
-    var tn = new Date();
-    var hn = tn.getHours(); 
-    if (hn > 5 && hn < 12){
-        if (q > 0){
-            fadeOut("compliments");
-        //$("#compliments").fadeTo("slow", 0);
-        }
-        fadeIn("compliments");
-        //$("#compliments").fadeTo("slow", 1);
-        if (q == Object.keys(compliments.morning).length){
-            q = 0;
-        }
-        document.getElementById("compliments").innerHTML = compliments.morning[q];
-        q++;
-    }
-    if (hn > 11 && hn < 15){
-        if (q > 0){
-            fadeOut("compliments");
-        }
-        fadeIn("compliments");
-        if (q == Object.keys(compliments.lunch).length){
-            q = 0;
-        }
-        document.getElementById("compliments").innerHTML = compliments.lunch[q];
-        q++;
-    }
-    if (hn > 14 && hn < 19){
-        if (q > 0){
-            fadeOut("compliments");
-        //$("#compliments").fadeTo("slow", 0);
-        }
-        //$("#compliments").fadeTo("slow", 0);
-        fadeIn("compliments");
-        if (q == Object.keys(compliments.afternoon).length){
-            q = 0;
-        }
-        document.getElementById("compliments").innerHTML = compliments.afternoon[q];
-        q++;
-    }
-    if (hn > 18 && hn < 23){
-        if (q > 0){
-            fadeOut("compliments");
-        }
-        fadeIn("compliments");
-        if (q == Object.keys(compliments.evening).length){
-            q = 0;
-        }
-        document.getElementById("compliments").innerHTML = compliments.evening[q];
-        q++;
-    }
-    if (hn > 22 && hn < 6){
-        if (q > 0){
-            fadeOut("compliments");
-        }
-        fadeIn("compliments");
-        if (q == Object.keys(compliments.night).length){
-            q = 0;
-        }
-        document.getElementById("compliments").innerHTML = compliments.night[q];
-        q++;
-    }
-}
-
-updateComp();
-
-setInterval(updateComp, (60*1000));
+setInterval(function(){
+  var target = document.getElementById("compliments");
+  updateComp(target);
+}, 20 * 1000);
 
 //});
