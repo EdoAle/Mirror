@@ -182,7 +182,11 @@ span#day1.days{
   font-size: 20px;
   padding-bottom: 10px;
   color: rgba(255,255,255, 0.7);
+  transition: opacity 1s ease-in-out;
 }
+
+.ghost1 { opacity : 0; }
+.ghost2 { opacity : 0; }
 
 #news-title{
   text-align: center;
@@ -192,6 +196,7 @@ span#day1.days{
   top: 10%;
   font-size: 20px;
   color:#fff;
+  transition: opacity 1s ease-in-out;
 }
 /*---CALENDAR PROPERTIES-------------------------------------------------------*/
 
