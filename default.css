@@ -446,3 +446,22 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 }
 
 /*----------------------------------------------------------------------*/
+
+#demo{
+  position: fixed;
+  right: 10%;
+  bottom: 10%;
+  color: white;
+}
+
+#boh12{
+  position: fixed;
+  right: 10%;
+  bottom: 10%;
+}
+
+#out{
+  position: fixed;
+  right: 9%;
+  bottom: 9%;
+}

@@ -15,8 +15,9 @@ function getcWeather() {
 //Current Weather DAQ
 
     var cWeather = new XMLHttpRequest();
-    cWeather.open("GET", "http://api.openweathermap.org/data/2.5/weather?lat=" + config.lat + "&lon=" + config.lng + "&appid=" + config.api + "&units=" + config.unit + "&lang=" + config.language, false);
+    cWeather.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=" + config.city + "&appid=" + config.api + "&units=" + config.unit + "&lang=" + config.language, false);
     cWeather.send(null);
+    //lert(latitude1 + " " + longitude1);
     var currentWeather = JSON.parse(cWeather.response);
     return(currentWeather);
 
