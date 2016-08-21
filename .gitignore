@@ -43,3 +43,5 @@ jsconfig.json
 .vscode/.browse.VC.db-shm
 
 .vscode/.browse.VC.db-wal
+
+.vscode/launch.json
