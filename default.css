@@ -123,12 +123,19 @@ body{
   top: 10%;
 }
 
-.days{
+#day1,
+#day2,
+#day3,
+#day4,
+#day5,
+#day6{
   font-size: 22px;
   color:white;
   text-align: left;
   position:relative;
   right:0%;
+  display: inline-block;
+  min-width: 279px;
 
 }
 
@@ -137,9 +144,9 @@ body{
   font-size: 22px;
   color: white;
   text-align: right;
-  position:fixed;
-  left: 16.5%;
+  position:relative;
 }
+
 
 .data-weather-min{
   padding-bottom: 18px;
@@ -159,11 +166,9 @@ body{
 
 .days-icons{
   text-align: right;
+  display: inline-block;
 }
 
-span#day1.days{
-  width: 200px;
-}
 
 /*---NEWS PROPERTIES-------------------------------------------------------*/
 
@@ -250,7 +255,7 @@ span#day1.days{
 }
 
 #summary8{
-  opacity: 0.1;
+  opacity: 0.15;
 }
 
 #datecal1,
@@ -285,7 +290,7 @@ span#day1.days{
 }
 
 #datecal8{
-  opacity: 0.1;
+  opacity: 0.15;
 }
 
 .calendar-events-max{
