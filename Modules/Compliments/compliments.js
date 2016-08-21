@@ -73,6 +73,6 @@ function updateComp(target){
 setInterval(function(){
   var target = document.getElementById("compliments");
   updateComp(target);
-}, 30 * 1000);
+}, 60 * 1000);
 
 //});
