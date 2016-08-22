@@ -12,8 +12,8 @@ var config = {
         unit: "metric",
         language: "it",
         city: "treviso,it",
-        lat: 45.8824600,
-        lng: 12.2964500
+        lat: 0,
+        lng: 0
 }
 var newsfeed = {
         url: [
