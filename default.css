@@ -46,8 +46,8 @@
 body{
   font-size: 22px;
   background-color: #000;
-	font-family: 'RobotoCondensed';
-  /*-webkit-font-smoothing: antialiased;*/
+	font-family: 'RobotoCondensedRegular';
+  -webkit-font-smoothing: antialiased;
 	margin: 0px;
 	padding: 0px;
   color: #fff;
