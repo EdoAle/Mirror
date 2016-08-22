@@ -9,13 +9,15 @@
 */
 
 //DAQ Part CURRENT WEATHER
-
+var positions = require('/Users/Administrator/Desktop/Mirror/Config/position.js');
+positions.requirePosition(getcWeather());
 function getcWeather() {
+    //alert("sono partito");
 
 //Current Weather DAQ
 
     var cWeather = new XMLHttpRequest();
-    cWeather.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=" + config.city + "&appid=" + config.api + "&units=" + config.unit + "&lang=" + config.language, false);
+    cWeather.open("GET", "http://api.openweathermap.org/data/2.5/weather?lat=" + config.lat + "&lon=" + config.lng + "&appid=" + config.api + "&units=" + config.unit + "&lang=" + config.language, false);
     cWeather.send(null);
     //lert(latitude1 + " " + longitude1);
     var currentWeather = JSON.parse(cWeather.response);
@@ -35,7 +37,7 @@ function getfWeather(Days) {
 //Weather Forecast DAQ
 
     var wForecast = new XMLHttpRequest();
-    wForecast.open("GET", "http://api.openweathermap.org/data/2.5/forecast/daily?q=" + config.city + "&appid=" + config.api + "&units=" + config.unit + "&lang=" + config.language + "&cnt=" + Days, false);
+    wForecast.open("GET", "http://api.openweathermap.org/data/2.5/forecast/daily?lat=" + config.lat + "&lon=" + config.lng + "&appid=" + config.api + "&units=" + config.unit + "&lang=" + config.language + "&cnt=" + Days, false);
     wForecast.send(null);
     var weatherForecast = JSON.parse(wForecast.response);
     return(weatherForecast);
