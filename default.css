@@ -31,11 +31,40 @@
   font-weight: 100 !important;
   src: url(fonts/Hgo13k-tfSpn0qi1SFdUfbO3LdcAZYWl9Si6vvxL-qU.woff);
 }
+@font-face{
+  font-family: 'RobotoCondensed';
+  font-style: normal;
+  src: url(fonts/RobotoCondensed-Light.ttf);
+}
+@font-face{
+  font-family: 'RobotoCondensedRegular';
+  font-style: normal;
+  src: url(fonts/RobotoCondensed-Regular.ttf);
+}
+/*---BODY PROPERTIES----------------------------------------------------------*/
+
+body{
+  font-size: 22px;
+  background-color: #000;
+	font-family: 'RobotoCondensed';
+  -webkit-font-smoothing: antialiased;
+	margin: 0px;
+	padding: 0px;
+  color: #fff;
+  cursor: none;
+  /*font-weight: 100;   ----------------------------------TO CHANGE AT THE END*/
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 /*---COMPLIMENTS PROPERTIES---------------------------------------------------*/
 
 #compliments{
   width: 100%;
-  font-size: 70px;
+  font-size: 80px;
   text-align: center;
   position: fixed;
   top: 44%;
@@ -51,25 +80,6 @@
 @keyframes fadeout {
     from {opacity: 0;}
     to {opacity: 1;}
-}
-
-
-/*---BODY PROPERTIES----------------------------------------------------------*/
-
-body{
-  font-size: 22px;
-  background-color: #000;
-	font-family: 'Roboto';
-	margin: 0px;
-	padding: 0px;
-  color: #fff;
-  cursor: none;
-  /*font-weight: 100;   ----------------------------------TO CHANGE AT THE END*/
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 /*---WEATHER PROPERTIES-------------------------------------------------------*/
@@ -119,7 +129,7 @@ body{
   width: 133px !important;
   color:white !important;
   position:relative !important;
-  left: 7% !important;
+  left: 5% !important;
   top: 10%;
 }
 
