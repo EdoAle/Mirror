@@ -60,7 +60,7 @@ function updateComp(target){
   // fade the existing compliment then replace it and fade in.
   // ----------------
   var className = "ghost";
-  var duration = 1000;
+  var duration = 2000;
 
   target.classList.add(className);
   setTimeout(function(){

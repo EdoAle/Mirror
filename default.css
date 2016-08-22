@@ -46,13 +46,12 @@
 body{
   font-size: 22px;
   background-color: #000;
-	font-family: 'RobotoCondensed';
-  -webkit-font-smoothing: antialiased;
+	font-family: 'Roboto';
+  /*-webkit-font-smoothing: antialiased;*/
 	margin: 0px;
 	padding: 0px;
   color: #fff;
   cursor: none;
-  /*font-weight: 100;   ----------------------------------TO CHANGE AT THE END*/
   -moz-user-select: none;
   -khtml-user-select: none;
   -webkit-user-select: none;
@@ -68,9 +67,7 @@ body{
   text-align: center;
   position: fixed;
   top: 44%;
-  transition: all 1s;
-  animation: 1s;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 2s ease-in-out;
 }
 .ghost { opacity : 0; }
 @keyframes fadein {
