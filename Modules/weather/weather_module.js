@@ -9,10 +9,17 @@
 */
 
 //DAQ Part CURRENT WEATHER
-var positions = require('/Users/Administrator/Desktop/Mirror/Config/position.js');
-positions.requirePosition(getcWeather());
+/*var positions = require('/Users/Administrator/Desktop/Mirror/Config/position.js');
+positions.requirePosition();*/
+
+function getWeather(){
+    alert("Mi ha fatto partire");
+}
+
+
 function getcWeather() {
     //alert("sono partito");
+    //alert(config.lat + " " + config.lng);
 
 //Current Weather DAQ
 
@@ -33,6 +40,8 @@ function printcWeather(curweather) {
 
 
 function getfWeather(Days) {
+    //alert("sono partito 2");
+    //alert(config.lat + " " + config.lng);
 
 //Weather Forecast DAQ
 
