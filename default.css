@@ -110,6 +110,8 @@ body{
 #name{
   position: relative;
   min-width:130px;
+  max-width: 160px;
+  text-overflow: "...";
   left:3%;
   top: 3%;
   font-size: 32px;
