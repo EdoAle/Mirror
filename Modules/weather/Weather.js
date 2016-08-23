@@ -43,7 +43,17 @@ function printfWeather(fdays1) {
 function printcWeather() {
 
     cweather = getcWeather();
-    document.getElementById("name").innerHTML = cweather.name;
+    var str1 = cweather.name;
+    var res1 = "";
+    if (str1.length > 10){
+        res1 = str1.slice(0, 9);
+        res1 = res1.trim();
+        res1 = res1 + "...";
+        //alert(res1);
+    }else{
+        res1 = str1;
+    }
+    document.getElementById("name").innerHTML = res1;
     document.getElementById("icond").innerHTML = getIcon(cweather.weather[0].icon);
 
     //Print CURRENT TEMP
