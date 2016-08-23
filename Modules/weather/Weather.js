@@ -1,7 +1,7 @@
 /**
  * Created by alebe on 02/07/2016.
  */
-var positions = require("/Users/Administrator/Desktop/Mirror/Modules/weather/position.js");
+var positions = require("position-mirror/position.js");
 positions.requirePosition();
 forecastDays = 6;
 
