@@ -134,6 +134,11 @@ body{
   top: 10%;
 }
 
+#finance-name{
+  color: #fff;
+  font-size: 5px;
+}
+
 #day1,
 #day2,
 #day3,

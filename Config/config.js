@@ -26,3 +26,14 @@ var newsfeed = {
         ],
         reloadTime: 10000,
 }
+
+var finance = {
+        mark1: "YHOO",
+        mark2: "AAPL",
+        mark3: "GOOGL",
+        mark4: "MSFT",
+        mark5: "UCG.MI",
+        mark6: "FTSEMIB.MI",
+        mark7: "EBAY",
+        mark8: "AMZN"
+}
