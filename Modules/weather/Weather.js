@@ -21,7 +21,7 @@ function printfWeather(fdays1) {
 
     //PrintDay
 
-    var dayN12 = getDayNum() + 1;
+    /*var dayN12 = getDayNum() + 1;
 
     for (var id1 = 0; id1 != fdays1; id1++) {
         if (dayN12 <= fdays1) {
@@ -32,7 +32,7 @@ function printfWeather(fdays1) {
             document.getElementById("day" + (id1 + 1)).innerHTML = getDayName(dayN12);
             dayN12++;
         }
-    }
+    }*/
 
 }
 
