@@ -223,11 +223,11 @@ body{
 
 .calendar-box{
   width: 360px;
-  height: 400px;
+  height: 300px;
   display: block;
   text-align: right;
   position: fixed;
-  right: 1%;
+  right: 0.8%;
   top: 10%;
   border-radius: 25px;
   color: #fff;
@@ -403,7 +403,7 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
   height: 400px;
   position: fixed;
   bottom: 0%;
-  left: 0.4%;
+  left: 0.5%;
   font-size: 20px;
   border-radius: 25px;
   display: inline-block;
