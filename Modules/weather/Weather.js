@@ -49,9 +49,15 @@ function printcWeather() {
         res1 = str1.slice(0, 9);
         res1 = res1.trim();
         res1 = res1 + "...";
+        document.getElementById("temp").style.left = "6%";
+        document.getElementById("icond").style.left = "0%";
         //alert(res1);
     }else{
         res1 = str1;
+        if (str1.lenght > 8){
+            document.getElementById("temp").style.left = "9%";
+            document.getElementById("icond").style.left = "-3%";
+        }
     }
     document.getElementById("name").innerHTML = res1;
     document.getElementById("icond").innerHTML = getIcon(cweather.weather[0].icon);

@@ -109,7 +109,7 @@ body{
 
 #name{
   position: relative;
-  min-width:140px;
+  min-width:145px;
   max-width: 155px;
   text-overflow: "...";
   left:3%;
