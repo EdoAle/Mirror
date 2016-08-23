@@ -10,7 +10,7 @@ var fUpdateTime = 7200000;
 
 //Print WEATHER FORECAST
 
-function printfWeather(fdays1) {
+function printfWeather(fdays1) { 
 
     //PrintfTemp
 
