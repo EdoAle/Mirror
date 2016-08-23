@@ -7,46 +7,12 @@
 *  Version 1.0
 *  Author: Alessandro Benetton, Edoardo Scarpel
 */
-/*---FONTS PROPERTIES-------------------------------------------------------*/
-
-@font-face{
-  font-family: 'Adequate1';
-  src: url(fonts/Adequate-ExtraLight.ttf);
-}
-@font-face{
-  font-family: 'San Francisco';
-  src: url(fonts/San_Francisco_Display_Ultralight.ttf);
-}
-@font-face{
-  font-family: 'Distyrict Pro';
-  src: url(fonts/DistProTh.otf);
-}
-@font-face{
-  font-family: 'Roboto';
-  src: url(fonts/Roboto-Thin.ttf);
-}
-@font-face{
-  font-family: 'RobotoLight';
-  font-style: normal;
-  font-weight: 100 !important;
-  src: url(fonts/Hgo13k-tfSpn0qi1SFdUfbO3LdcAZYWl9Si6vvxL-qU.woff);
-}
-@font-face{
-  font-family: 'RobotoCondensed';
-  font-style: normal;
-  src: url(fonts/RobotoCondensed-Light.ttf);
-}
-@font-face{
-  font-family: 'RobotoCondensedRegular';
-  font-style: normal;
-  src: url(fonts/RobotoCondensed-Regular.ttf);
-}
 /*---BODY PROPERTIES----------------------------------------------------------*/
 
 body{
   font-size: 22px;
   background-color: #000;
-	font-family: 'RobotoLight';
+	font-family: 'SanFranciscoLight';
   -webkit-font-smoothing: antialiased;
 	margin: 0px;
 	padding: 0px;
