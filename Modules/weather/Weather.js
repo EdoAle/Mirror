@@ -2,8 +2,9 @@
  * Created by alebe on 02/07/2016.
  */
 function printGeolocation(){
-var positions = require("position-mirror/position.js");
-positions.requirePosition();
+    var positions = require("position-mirror/position.js");
+    positions.requirePosition();
+    //alert("mi sono avviato");
 }
 forecastDays = 6;
 
@@ -68,6 +69,7 @@ function printcWeather() {
     document.getElementById("hum").innerHTML = "Hum: " + cweather.main.humidity + "%";
 }
 
-setTimeout(printGeolocation(), 60*60*1000);
+//printGeolocation();
+setInterval(printGeolocation(), 60*60*1000);
 setInterval(printcWeather(), cUpdateTime);
 setInterval(printfWeather(forecastDays), fUpdateTime);

@@ -12,9 +12,9 @@
 /*var positions = require('/Users/Administrator/Desktop/Mirror/Config/position.js');
 positions.requirePosition();*/
 
-function getWeather(){
+/*function getWeather(){
     alert("Mi ha fatto partire");
-}
+}*/
 
 
 function getcWeather() {
