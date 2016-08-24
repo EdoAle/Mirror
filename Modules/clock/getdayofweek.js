@@ -1,18 +1,15 @@
-function impostGio(){
+function impostGio(numberDay){
 //alert("sono nel programma");
 var days1 = [
-    'Domenica',
     'Luned&igrave;',
     'Marted&igrave;',
     'Mercoled&igrave;',
     'Gioved&igrave;',
     'Venerd&igrave;',
-    'Sabato'
+    'Sabato',
+    'Domenica'
 ];
 //alert("ho impostato i giorni");
-
-var today1 = new Date();
-var numberDay = today1.getDay() + 1;
 var fdays1 = 6;
 for (var id = 0; id != fdays1; id++) {
     if (numberDay <= fdays1) {
@@ -25,4 +22,4 @@ for (var id = 0; id != fdays1; id++) {
     }
 }
 };
-setInterval(impostGio(), 30*60*1000);
+setTimeout(impostGio(), 60*1000);

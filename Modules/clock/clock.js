@@ -35,6 +35,7 @@ function startTime() {
     document.getElementById('Data').innerHTML = days[n] + ", " + d + " " + months[mo] + " " + y; 
     document.getElementById('ora1').innerHTML = h + ":" + m;
     document.getElementById('ora2').innerHTML = s;
+    impostGio(n);
     var t = setTimeout(startTime, 1000);
 }
 
