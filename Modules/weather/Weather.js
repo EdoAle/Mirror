@@ -70,6 +70,6 @@ function printcWeather() {
 }
 
 //printGeolocation();
-setInterval(printGeolocation(), 60*60*1000);
-setInterval(printcWeather(), cUpdateTime);
-setInterval(printfWeather(forecastDays), fUpdateTime);
+setInterval(printGeolocation(), cUpdateTime);
+printcWeather();
+printfWeather();

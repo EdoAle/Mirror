@@ -40,11 +40,11 @@ function updateComp(target){
   var ss = tn.getSeconds();
 
   var comp = (function(hn, allComps){
-    if (hn > 5 && hn < 12) { return allComps.morning; }
-    if (hn > 11  && hn < 15) { return allComps.lunch; }
-    if (hn > 14  && hn < 19) { return allComps.afternoon; }
-    if (hn > 18  && hn < 23) { return allComps.evening; }
-    if (hn > 22  && hn < 6) { return allComps.night; }
+    if (hn >= 6 && hn <= 11) { return allComps.morning; }
+    if (hn >= 12  && hn <= 14) { return allComps.lunch; }
+    if (hn >= 15  && hn <= 18) { return allComps.afternoon; }
+    if (hn >= 19  && hn <= 22) { return allComps.evening; }
+    if (hn >= 23  && hn <= 5) { return allComps.night; }
     return [""];
   })(hn, compliments);
   
