@@ -5,7 +5,9 @@ var divNews = {
     date: []
 }
 
-var newsName = 'Corriere della Sera';
+var nNum = 0;
+
+var newsName = config.newsName[nNum];
 
 var newsHours = [];
 

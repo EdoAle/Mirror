@@ -19,7 +19,13 @@ function printfWeather(fdays1) {
 
     fWeather = getfWeather(fdays1);
     for (var id = 0; id != forecastDays; id++) {
-        document.getElementById("day" + (id + 1) + ".temp").innerHTML = Math.round(fWeather.list[id].temp.day) + "&deg;" + getUnit(config.unit) + " " + getIcon(fWeather.list[id].weather[0].icon);
+        var temperature = Math.round(fWeather.list[id].temp.day);
+        if ((temperature < 10) && (temperature > -1)){
+            temperature =  "&nbsp;" + temperature + "&deg;" + getUnit(config.unit)+ "&nbsp;";
+        }else{
+            temperature = temperature + "&deg;" + getUnit(config.unit);
+        }
+        document.getElementById("day" + (id + 1) + ".temp").innerHTML = temperature + " " + getIcon(fWeather.list[id].weather[0].icon);
     }
 
     //PrintDay

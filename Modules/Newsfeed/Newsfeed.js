@@ -9,7 +9,7 @@ function newsUpdate2() {
             myFunction(xhttp);
         }
     };
-    xhttp.open("GET", "http://xml.corriereobjects.it/rss/homepage.xml", true);
+    xhttp.open("GET", config.newsUrl[nNum], true);
     xhttp.send();
 
 
@@ -24,8 +24,6 @@ var cDate = new Date();
 var result = [];
 
 var result1 = [];
-
-var newsName = 'Corriere della Sera';
 
 var newsDate = [];
 

@@ -21,7 +21,7 @@ xhttp.onreadystatechange = function() {
         myFunction(xhttp);
     }
 };
-xhttp.open("GET", "http://xml.corriereobjects.it/rss/homepage.xml", true);
+xhttp.open("GET", config.newsUrl[nNum], true);
 xhttp.send();
 
 function myFunction(xml) {

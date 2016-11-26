@@ -32,9 +32,9 @@ function getcWeather() {
 
 }
 
-function printcWeather(curweather) {
+/*function printcWeather(curweather) {
     var currentWeather = curweather;
-}
+}*/
 
 //DAQ Part WEATHER FORECAST
 
