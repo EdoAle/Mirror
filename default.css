@@ -215,6 +215,8 @@ body{
 #summary6,
 #summary7,
 #summary8{
+  position: relative;
+  left: -1%;
   height: 25px;
   width: 230px;
   font-size: 19px;

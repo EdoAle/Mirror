@@ -8,7 +8,7 @@
 *  Author: Alessandro Benetton, Edoardo Scarpel
 */
 
-var calNum = 3;
+var calNum = 4;
 var ical = require('ical'),
 months = ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre']
 
@@ -18,17 +18,23 @@ var control = [""];
 var dstart = [0];
 var summary = [""];
 
+function reloadCalendar() {
 ical.fromURL(config.calendar[calNum], {}, function(err, data) {
 for (var k in data){
   if (data.hasOwnProperty(k)) {
     f++;
     var ev = data[k];
     var dateNow = new Date();
-    dateNow.setFullYear(config.calendarYear[calNum]);
+    var yearNow = dateNow.getFullYear() + 1;
     var date = new Date(ev.start);
+    if (date < dateNow && calNum != 3){
+        date.setFullYear(yearNow);
+    }else if (calNum == 3){
+        dateNow.setFullYear(config.calendarYear[calNum]);
+    }
     control[f] = ev.summary;
     if (ev.summary != undefined){
-        if(date >= dateNow){
+        if (date >= dateNow){
             if (control[f] != control[f-1]){
                 e++;
                 summary[e] = ev.summary;
@@ -37,16 +43,23 @@ for (var k in data){
         }
     }
   }
-}   
-bubbleSortCal();
+} 
+classificationCal1();
 for (var i=1; i<9; i++){
+    control[f] = summary[i];
     if(summary[i] != undefined){
-        document.getElementById("summary" + i).innerHTML = ' <i class="material-icons" style="font-size:17px">event</i> ' + summary[i];
-        document.getElementById("datecal" + i).innerHTML = dstart[i].getDate() + ' ' + months[dstart[i].getMonth()];
+        if (control[f] != control[f-1] && calNum != 3){
+            document.getElementById("summary" + i).innerHTML = ' <i class="material-icons" style="font-size:17px">event</i> ' + summary[i];
+            document.getElementById("datecal" + i).innerHTML = dstart[i].getDate() + ' ' + months[dstart[i].getMonth()];
+        }else if(calNum == 3){
+            document.getElementById("summary" + i).innerHTML = ' <i class="material-icons" style="font-size:17px">event</i> ' + summary[i];
+            document.getElementById("datecal" + i).innerHTML = dstart[i].getDate() + ' ' + months[dstart[i].getMonth()];
+        }
     }
 }
 });
-function bubbleSortCal() {
+}
+function classificationCal1() {
     var length = summary.length;
     for (var i = (length - 1); i >= 0; i--) { //Number of passes
         for (var j = (length - i); j > 0; j--) {
@@ -63,3 +76,5 @@ function bubbleSortCal() {
         }        
     }
 };
+reloadCalendar();
+setInterval(reloadCalendar, 5*60*1000);

@@ -18,7 +18,8 @@ var config = {
                 "https://calendar.google.com/calendar/ical/it.italian%23holiday%40group.v.calendar.google.com/public/basic.ics",
                 "https://calendar.google.com/calendar/ical/edoardo.scarpel55%40gmail.com/private-cb8e2405de0be8a11a8914536f6db658/basic.ics",
                 "https://p17-calendars.icloud.com/holiday/IT_it.ics",
-                "https://www.mozilla.org/media/caldata/ItalianHolidays.ics"
+                "https://www.mozilla.org/media/caldata/ItalianHolidays.ics",
+                "https://calendar.google.com/calendar/ical/edoardo.scarpel55%40gmail.com/public/basic.ics"
         ],
         calendarYear: [
                 new Date().getFullYear(),
